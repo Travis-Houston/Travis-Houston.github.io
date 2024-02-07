@@ -28,7 +28,7 @@
                 <input type="text" name="last_name" id="last_name" size="20" pattern="[A-Za-z]{1,20}"
                     title="Only alphabetical characters allowed" >
             </p>
-            <p> <!-- FIX THE PATTERN -->
+            <p>
                 <label for="date_of_birth"> Date of Birth</label>
                 <input type="text" name="date_of_birth" id="date_of_birth" size="20"
                     pattern="([0]?[1-9]|[1-2]?[0-9]|[3]?[0-1])/([0]?[1-9]|[1]?[0-2])/\d{4}" title="dd/mm/yyyy" >
@@ -36,9 +36,9 @@
         </fieldset>
         <fieldset>
             <legend>Gender</legend>
-            <p><label><input type="radio" name="gender" value="Men" > Men</label>
-                <label><input type="radio" name="gender" value="Women"> Women</label>
-                <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label></p>
+            <p><label><input type="radio" name="gender" value="Men" >Men</label>
+                <label><input type="radio" name="gender" value="Women">Women</label>
+            </p>
         </fieldset>
         <p>
             <label for="street_address">Street Address</label>
@@ -74,7 +74,7 @@
             <label for="phone_num">Phone Number</label>
             <input type="text" name="phone_num" id="phone_num" pattern="[0-9\s]{8,12}">
         </p>
-        <fieldset> <!--THIS NEED TO BE OPTIMIZED-->
+        <fieldset>
             <legend>Skill List</legend>
             <label><input type="checkbox" name="skill_list[]" value="Programming and Scripting Languages">Programming and Scripting Languages</label><br>
             <label><input type="checkbox" name="skill_list[]" value="Web Development">Web Development</label><br>
@@ -85,8 +85,12 @@
         </fieldset>
         <p>
             <label>Other Skills</label>
-            <br><textarea name="other_skills" rows="6" cols="25" required="required" placeholder="Write your other skills here..."></textarea></p>
+            <br><textarea name="other_skills" rows="6" cols="25" placeholder="Write your other skills here..."></textarea></p>
         </p>
+        <fieldset> <!--This is maybe one of enhancements-->
+            <legend>Upload your CV</legend>
+            <p><input type="file" name="cv_upload" id="cv_upload">
+        </fieldset></p>
         <input type="submit" value="Apply">
     </form>
 
