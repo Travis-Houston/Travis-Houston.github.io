@@ -91,6 +91,7 @@ body {
     line-height: 20px;
     position: absolute;
     bottom: 0; 
+    z-index: 0; 
   }
 
   /*footer row*/
@@ -282,6 +283,7 @@ body {
         width: 100%;
         height: calc(100vh - 60px);
         transition: 0.5s;
+        z-index: 1; /* Set z-index to 1 */
       }
     
       input[type="checkbox"]:checked ~ ul {
@@ -296,8 +298,9 @@ body {
       footer
       {
         bottom: unset;
+        z-index: 0;
       }
-      
+
       .col
       {
         flex-basis: 100%;
