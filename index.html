@@ -7,14 +7,16 @@
   <meta name="author" content="Chi Lon Thon">
   <link rel="stylesheet" href="css/style.css">
   <!--Icons-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!--Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   <title>Only PHP</title>
   </head>
   <body>
  <!--Header and navbar-->
   <header>
     <nav>
-      <a href="#home" id="logo">PHPSufferers</a>
+      <a href="#home" class="logo"><img src="images/Logo.webp" alt ="logo" class = "logo"></a>
       <input type="checkbox" id="dropdown-btn" />
       <label for="dropdown-btn">
         <span class="fa-solid fa-bars"></span>
@@ -53,40 +55,53 @@
     </div>
 
     <footer>
-    <div class = "footer">
-      <div>
-        <h4>PHP Suffer</h4>
-        <p>Im so love php.</p>
+      <div class="row">
+        <!--Logo and Description-->
+        <div class="col">
+          <img src="images/Logo.webp" alt ="logo" class = "logo">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <!--Adress-->
+        <div class="col">
+          <h3>Office <div class="underline"><span></span></div></h3>
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p id ="email-id">4</p>
+          <h4>2342353214521345</h4>
+        </div>
+
+        <!--Navigation-->
+        <div class="col">
+          <h3>links <div class="underline"><span></span></div></h3>
+            <ul>
+              <li><a href="#home_page">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="enhancements.html">Enhancements</a></li>
+              <li><a href="jobs.html">Job Descriptions</a></li>
+              <li><a href="apply.html">Job Application</a></li>
+            </ul>
+        </div>
+
+        <!--Newsletter-->
+        <div class="col">
+          <h3>Newsletter <div class="underline"><span></span></div></h3>
+          <form id="footer-form">
+            <span class="fa-solid fa-envelope"></span>
+            <input type="email" placeholder="Enter email please!">
+            <button type="submit"><span class="fa-solid fa-newspaper">Apply</span></button>
+          </form>
+            <!--Social Icons-->
+          <div class="social-icons">
+            <span class="fa-brands fa-square-facebook"></span>
+            <span class="fa-brands fa-square-twitter"></span>
+            <span class="fa-brands fa-linkedin"></span>
+          </div>
+        </div>
       </div>
-      <section>
-        <h4>Our PHP Lover Comunity</h4>
-        <ul id = "footer">
-          <li><a href="#home_page">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="job_description.html">Job Descriptions</a></li>
-          <li><a href="jobs.html">Job Application</a></li>
-        </ul>
-      </section>
-
-      <section>
-        <h4>Our Job Application</h4>
-        <ul id="footer1">
-          <li><a href="job_description.html">AI Engineer</a></li>
-          <li><a href="job_description.html">Big Data Manager</a></li>
-          <li><a href="jobs.html">Data Scientist</a></li>
-        </ul>
-      </section>
-      <section>
-
-        <h4>Contact Us</h4>
-        <ul id="footer2">
-        <li ><a id="mail" href="mailto: 103804535@student.swin.edu.au">Bao</a></li>
-        <li><a id="mail" href="mailto: 104171146@student.swin.edu.au">Thong</a></li>
-        <li><a id="mail" href="mailto: 10477508@student.swin.edu.au">Tam</a></li>
-        </ul>
-      </section>
-    </div>
-    <aside>&copy; Copyright <strong><span>PHP Suffer</span></strong>. All Rights Reserved</aside>
+      <hr>
+      <p class="copyright">&copy;<a href = "https://www.swinburne.edu.au">Swinburne University of Technology</a></p>
     </footer>
   </body>
 </html>
