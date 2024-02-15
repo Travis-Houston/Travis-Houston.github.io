@@ -34,125 +34,117 @@
 
       <div class="applying-basic-info">
         <fieldset>
-          <legend>Basic Info</legend>
+          <legend>Personal Information</legend>
 
-      
-          <label for="job_ref_num">
-          <input type="text" name="job_ref_num" id="job_ref_num" size="20"
-          pattern="[a-zA-Z0-9]{5}" title="Please enter exactly 5 aplphanumeric characters">
-          Job Reference Number</label><hr>
-          <p>First Name</p>
+          <label for="job_ref_num">Job Reference Number</label>
+          <input type="text" name="job_ref_num" id="job_ref_num" size="20" pattern="[a-zA-Z0-9]{5}"
+            title="Please enter exactly 5 aplphanumeric characters" />
+          <hr>
+          <label for="first_name">First Name</label>
           <input class="textbox-styling" type="text" name="first_name" id="first_name" size="20"
             pattern="[A-Za-z]{1,20}" title="Only maximum of 20 alphabetical characters allowed">
           <hr>
-          <p>Last Name</p>
+          <label for="last_name">Last Name</label>
           <input class="textbox-styling" type="text" name="last_name" id="last_name" size="20" pattern="[A-Za-z]{1,20}"
             title="Only alphabetical characters allowed">
           <hr>
-          <p>Date of Birth</p>
+          <label for="date_of_birth">Date of Birth</label>
           <input class="textbox-styling" type="text" name="date_of_birth" id="date_of_birth" size="20"
             pattern="([0]?[1-9]|[1-2]?[0-9]|[3]?[0-1])/([0]?[1-9]|[1]?[0-2])/\d{4}" title="dd/mm/yyyy">
           <hr>
-        </fieldset>
+          <div class="gender">
+            <legend>Gender</legend>
+            <label class="container">
+              <input type="radio" name="gender" value="Men">Men
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Women
+              <input type="radio" name="gender" value="Women">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <hr>
+          <label for="street_address">Street Address</label>
+          <input class="textbox-styling" type="text" name="street_address" id="street_address" size="30" maxlength="40">
+          <hr>
+          <label for="suburb_town">Suburb Town</label>
+
+          <input class="textbox-styling" type="text" name="suburb_town" id="suburb_town" size="30" maxlength="40">
+          </p>
+          <hr>
+          <label for="state">State</label>
+          <select name="state" id="state">
+            <option value="">Please Select</option>
+            <option value="VIC">VIC</option>
+            <option value="NSW">NSW</option>
+            <option value="QLD">QLD</option>
+            <option value="NT">NT</option>
+            <option value="WA">SA</option>
+            <option value="SA">SA</option>
+            <option value="TAS">TAS</option>
+            <option value="ACT">ACT</option>
+          </select>
+          <hr>
+          <label for="postcode">Postcode</label>
+          <input class="textbox-styling" type="text" name="postcode" id="postcode" size="10" pattern="\d{4}">
+          <hr>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email">
+          <hr>
+          <label for="phone_num">Phone Number</label>
+          <input type="text" name="phone_num" id="phone_num" pattern="[0-9\s]{8,12}">
+          <hr>
+          <div class="skill_list">
+            <legend>Skill List</legend>
+
+            <label class="container">Programming and Scripting Languages
+              <input type="checkbox" name="skill_list[]" value="Programming and Scripting Languages">
+              <span class="checkmark"></span>
+            </label>
+            <hr>
+
+            <label class="container">Web Development
+              <input type="checkbox" name="skill_list[]" value="Web Development">
+              <span class="checkmark"></span>
+            </label>
+            <hr>
+
+            <label class="container">Database Management
+              <input type="checkbox" name="skill_list[]" value="Database Management">
+              <span class="checkmark"></span>
+            </label>
+            <hr>
+
+            <label class="container">Cloud Computing
+              <input type="checkbox" name="skill_list[]" id="skill_list" value="Cloud Computing">
+              <span class="checkmark"></span>
+            </label>
+            <hr>
+
+            <label class="container">Cybersecurity
+              <input type="checkbox" name="skill_list[]" value="Cybersecurity">
+              <span class="checkmark"></span>
+            </label>
+            <hr>
+
+
+            <label class="container">Other Skills
+              <input type="checkbox" name="skill_list[]" value="Other Skills">
+              <span class="checkmark"></span>
+            </label>
+            <hr>
+          <br><textarea name="other_skills" rows="6" cols="70" placeholder="Write your other skills here..."></textarea>
       </div>
-      <div class="gender">
-        <fieldset>
-          <legend>Gender</legend>
-          <label class="container">
-            <input type="radio" name="gender" value="Men">Men
-            <span class="checkmark"></span>
-          </label>
-          <label class="container">Women
-            <input type="radio" name="gender" value="Women">
-            <span class="checkmark"></span>
-          </label>
-        </fieldset>
+      <div class="upload-cv">
+      <label for="cv_upload">Upload your CV
+      <input type="file" name="cv_upload" id="cv_upload">
+      </label><hr>
       </div>
-      <p>
-        Street Address
-        <input class="textbox-styling" type="text" name="street_address" id="street_address" size="30" maxlength="40">
-      </p>
+      <input type="submit" value="Apply" id="apply">
+    </fieldset>
       <hr>
-      <p>
-        Suburb/Town
-        <input class="textbox-styling" type="text" name="suburb_town" id="suburb_town" size="30" maxlength="40">
-      </p>
-      <hr>
-      <p>
-        State
-        <select name="state" id="state">
-          <option value="">Please Select</option>
-          <option value="VIC">VIC</option>
-          <option value="NSW">NSW</option>
-          <option value="QLD">QLD</option>
-          <option value="NT">NT</option>
-          <option value="WA">SA</option>
-          <option value="SA">SA</option>
-          <option value="TAS">TAS</option>
-          <option value="ACT">ACT</option>
-        </select>
-      </p>
-      <hr>
-      <p>
-        Postcode
-        <input class="textbox-styling" type="text" name="postcode" id="postcode" size="10" pattern="\d{4}">
-      </p>
-      <p>
-        Email
-        <input class="textbox-styling" type="email" name="email" id="email">
-      </p>
-      <p>
-        Phone Number
-        <input class="textbox-styling" type="text" name="phone_num" id="phone_num" pattern="[0-9\s]{8,12}">
-      </p>
-      <fieldset>
-        <legend>Skill List</legend>
-
-        <label class="container">Programming and Scripting Languages
-          <input type="checkbox" name="skill_list[]" value="Programming and Scripting Languages">
-          <span class="checkmark"></span>
-        </label><br>
-
-        <label class="container">Web Development
-          <input type="checkbox" name="skill_list[]" value="Web Development">
-          <span class="checkmark"></span>
-        </label><br>
-
-        <label class="container">Database Management
-          <input type="checkbox" name="skill_list[]" value="Database Management">
-          <span class="checkmark"></span>
-        </label><br>
-
-        <label class="container">Cloud Computing
-          <input type="checkbox" name="skill_list[]" value="Cloud Computing">
-          <span class="checkmark"></span>
-        </label><br>
-
-        <label class="container">Cybersecurity
-          <input type="checkbox" name="skill_list[]" value="Cybersecurity">
-          <span class="checkmark"></span>
-        </label><br>
-
-        <label class="container">Other Skills
-          <input type="checkbox" name="skill_list[]" value="Other Skills">
-          <span class="checkmark"></span>
-        </label>
-
-      </fieldset>
-      <p>
-        <label>Other Skills</label>
-        <br><textarea class="textbox-styling" name="other_skills" rows="6" cols="25"
-          placeholder="Write your other skills here..."></textarea>
-      </p>
-      </p>
-      <fieldset> <!--This is maybe one of enhancements-->
-        <legend>Upload your CV</legend>
-        <p><input type="file" name="cv_upload" id="cv_upload">
-      </fieldset>
-      </p>
-      <input type="submit" value="Apply">
-    </form>
   </div>
+  </form>
   <footer>
     <div class="row">
       <!--Logo and Description-->

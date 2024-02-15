@@ -391,29 +391,26 @@
   }
   .applying-basic-info label
   {
-    display: flex;
-    color: red;
+    display: block;
+    float: left;
+    right:5%;
     margin: 0.5em;
-    font-size: 0px;
+    font-size: 18px;
   }
-  .applying-basic-info input
+  
+  .applying-basic-info input, select
   {
     margin: 0.5em;
     height: 2em;
     float: right;
-    margin-top: 0.3em;
+    margin-top: 0.2em;
   }
   .container
   {
-    display: block;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 18px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
   }
   .container input {
@@ -424,13 +421,14 @@
     width: 0;
   }
   .checkmark {
-    position: absolute;
+    display: absolute;
     top: 0;
-    left: 60px;
+    left: 20px;
     height: 20px;
     width: 20px;
     border-radius: 3em;
     background-color: #8b9199;
+    
   }
   .container:hover input ~ .checkmark {
     background-color: #36383b;
@@ -449,34 +447,41 @@
     height: 10px;
     content: "X";
   }
-  .gender fieldset
-  {
-    width: 15em;
-    padding: 1em;
-    margin-top: 1em;
-    margin-left: 21.3em;
-  }
   .gender label
   {
     display: inline-block;
-    
+    margin-left: 2em;
   }
   .gender .checkmark
   {
     position: absolute;
     top: 0;
     left: 5px;
-    height: 20px;
-    width: 20px;
-    border-radius: 3em;
+    background-color: #8b9199;
+  }
+  .skill_list .checkmark
+  {
+    position: absolute;
+    left: 550px;
     background-color: #8b9199;
   }
   input[type="text"]  
   {
-    border-radius: 1em;
+    border-radius: 0.5em;
     text-indent: 0.5em;
-    font-size: 18px;
+    font-size: 15px;
   }
+ #cv_upload
+  {
+    position: relative;
+    left:160px;
+  }
+#apply
+{
+  position: relative;
+  font-size: 20px;
+  width: 30em;
+}
   /* -----------------------------------*/
   /* ---------->>> RESPONSIVE <<<-----------*/
   /* -----------------------------------*/
