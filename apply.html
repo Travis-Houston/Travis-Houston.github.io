@@ -29,42 +29,55 @@
   </header>
   <div class="job-applying-container">
     <h1>Job Application</h1>
+
     <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+
       <div class="applying-basic-info">
         <fieldset>
           <legend>Basic Info</legend>
-          <p>Job Reference Number
-            <input type="text" name="job_ref_num" id="job_ref_num" size="5" pattern="[a-zA-Z0-9]{5}"
-              title="Please enter exactly 5 aplphanumeric characters">
-          </p>
-          <p>First Name
-            <input type="text" name="first_name" id="first_name" size="20" pattern="[A-Za-z]{1,20}"
-              title="Only maximum of 20 alphabetical characters allowed">
-          </p>
-          <p>Last Name
-            <input type="text" name="last_name" id="last_name" size="20" pattern="[A-Za-z]{1,20}"
-              title="Only alphabetical characters allowed">
-          </p>
-          <p>Date of Birth
-            <input type="text" name="date_of_birth" id="date_of_birth" size="20"
-              pattern="([0]?[1-9]|[1-2]?[0-9]|[3]?[0-1])/([0]?[1-9]|[1]?[0-2])/\d{4}" title="dd/mm/yyyy">
-          </p>
+
+      
+          <label for="job_ref_num">
+          <input type="text" name="job_ref_num" id="job_ref_num" size="20"
+          pattern="[a-zA-Z0-9]{5}" title="Please enter exactly 5 aplphanumeric characters">
+          Job Reference Number</label><hr>
+          <p>First Name</p>
+          <input class="textbox-styling" type="text" name="first_name" id="first_name" size="20"
+            pattern="[A-Za-z]{1,20}" title="Only maximum of 20 alphabetical characters allowed">
+          <hr>
+          <p>Last Name</p>
+          <input class="textbox-styling" type="text" name="last_name" id="last_name" size="20" pattern="[A-Za-z]{1,20}"
+            title="Only alphabetical characters allowed">
+          <hr>
+          <p>Date of Birth</p>
+          <input class="textbox-styling" type="text" name="date_of_birth" id="date_of_birth" size="20"
+            pattern="([0]?[1-9]|[1-2]?[0-9]|[3]?[0-1])/([0]?[1-9]|[1]?[0-2])/\d{4}" title="dd/mm/yyyy">
+          <hr>
         </fieldset>
       </div>
-      <fieldset>
-        <legend>Gender</legend>
-        <p><input type="radio" name="gender" value="Men">Men
-          <input type="radio" name="gender" value="Women">Women
-        </p>
-      </fieldset>
+      <div class="gender">
+        <fieldset>
+          <legend>Gender</legend>
+          <label class="container">
+            <input type="radio" name="gender" value="Men">Men
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Women
+            <input type="radio" name="gender" value="Women">
+            <span class="checkmark"></span>
+          </label>
+        </fieldset>
+      </div>
       <p>
         Street Address
-        <input type="text" name="street_address" id="street_address" size="30" maxlength="40">
+        <input class="textbox-styling" type="text" name="street_address" id="street_address" size="30" maxlength="40">
       </p>
+      <hr>
       <p>
         Suburb/Town
-        <input type="text" name="suburb_town" id="suburb_town" size="30" maxlength="40">
+        <input class="textbox-styling" type="text" name="suburb_town" id="suburb_town" size="30" maxlength="40">
       </p>
+      <hr>
       <p>
         State
         <select name="state" id="state">
@@ -79,17 +92,18 @@
           <option value="ACT">ACT</option>
         </select>
       </p>
+      <hr>
       <p>
         Postcode
-        <input type="text" name="postcode" id="postcode" size="10" pattern="\d{4}">
+        <input class="textbox-styling" type="text" name="postcode" id="postcode" size="10" pattern="\d{4}">
       </p>
       <p>
         Email
-        <input type="email" name="email" id="email">
+        <input class="textbox-styling" type="email" name="email" id="email">
       </p>
       <p>
         Phone Number
-        <input type="text" name="phone_num" id="phone_num" pattern="[0-9\s]{8,12}">
+        <input class="textbox-styling" type="text" name="phone_num" id="phone_num" pattern="[0-9\s]{8,12}">
       </p>
       <fieldset>
         <legend>Skill List</legend>
@@ -127,7 +141,8 @@
       </fieldset>
       <p>
         <label>Other Skills</label>
-        <br><textarea name="other_skills" rows="6" cols="25" placeholder="Write your other skills here..."></textarea>
+        <br><textarea class="textbox-styling" name="other_skills" rows="6" cols="25"
+          placeholder="Write your other skills here..."></textarea>
       </p>
       </p>
       <fieldset> <!--This is maybe one of enhancements-->
@@ -142,41 +157,48 @@
     <div class="row">
       <!--Logo and Description-->
       <div class="col">
-        <img src="images/Logo.webp" alt ="logo" class = "logo">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <img src="images/Logo.webp" alt="logo" class="logo">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.</p>
       </div>
 
       <!--Adress-->
       <div class="col">
-        <h3>Office <div class="underline"><span></span></div></h3>
+        <h3>Office <div class="underline"><span></span></div>
+        </h3>
         <p>1</p>
         <p>2</p>
         <p>3</p>
-        <p id ="email-id">4</p>
+        <p id="email-id">4</p>
         <h4>2342353214521345</h4>
       </div>
 
       <!--Navigation-->
       <div class="col">
-        <h3>links <div class="underline"><span></span></div></h3>
-          <ul>
-            <li><a href="#home_page">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="enhancements.html">Enhancements</a></li>
-            <li><a href="jobs.html">Job Descriptions</a></li>
-            <li><a href="apply.html">Job Application</a></li>
-          </ul>
+        <h3>links <div class="underline"><span></span></div>
+        </h3>
+        <ul>
+          <li><a href="#home_page">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="enhancements.html">Enhancements</a></li>
+          <li><a href="jobs.html">Job Descriptions</a></li>
+          <li><a href="apply.html">Job Application</a></li>
+        </ul>
       </div>
 
       <!--Newsletter-->
       <div class="col">
-        <h3>Newsletter <div class="underline"><span></span></div></h3>
+        <h3>Newsletter <div class="underline"><span></span></div>
+        </h3>
         <form id="footer-form">
           <span class="fa-solid fa-envelope"></span>
           <input type="email" placeholder="Enter email please!">
           <button type="submit"><span class="fa-solid fa-newspaper">Apply</span></button>
         </form>
-          <!--Social Icons-->
+        <!--Social Icons-->
         <div class="social-icons">
           <span class="fa-brands fa-square-facebook"></span>
           <span class="fa-brands fa-square-twitter"></span>
@@ -185,7 +207,7 @@
       </div>
     </div>
     <hr>
-    <p class="copyright">&copy;<a href = "https://www.swinburne.edu.au">Swinburne University of Technology</a></p>
+    <p class="copyright">&copy;<a href="https://www.swinburne.edu.au">Swinburne University of Technology</a></p>
   </footer>
 
 </body>
