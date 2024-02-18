@@ -3,533 +3,633 @@
 /* -----------------------------------*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* Background */
-  body 
-  {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  /* -----------------------------------*/
-  /* ---------->>> HEADER and NAVBAR <<<-----------*/
-  /* -----------------------------------*/
-  
-  /* Navbar */
-  nav {
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #2c32ec;
-    padding: 1em;
-  }
-  
-  nav a {
-    text-decoration: none;
-    text-transform: capitalize;
-    color: #ffffff;
-  }
-  
-  /*Logo*/
-  .logo
-  {
-    width: 80px;
-  }
-  
-  input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-  }
-  
-  label {
-    display: none;
-    cursor: pointer;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1em;
-  }
-  
-  nav ul a 
-  {
-    padding: 0.5em;
-  }
-  
-  nav ul a:hover 
-  {
-    background-color: #333333;
-    border-radius: 0.5em;
-  }
-  
-  .active 
-  {
-    border-bottom: 2px solid #ffffff;
+body {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* -----------------------------------*/
+/* ---------->>> HEADER and NAVBAR <<<-----------*/
+/* -----------------------------------*/
+
+/* Navbar */
+nav {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2c32ec;
+  padding: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+/*Logo*/
+.logo {
+  width: 80px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+label {
+  display: none;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+nav ul a {
+  padding: 0.5em;
+}
+
+nav ul a:hover {
+  background-color: #333333;
+  border-radius: 0.5em;
+}
+
+.active {
+  border-bottom: 2px solid #ffffff;
+}
+
+/* -----------------------------------*/
+/* ---------->>> FOOTER <<<-----------*/
+/* -----------------------------------*/
+
+footer {
+  width: 100%;
+  background: linear-gradient(to left, #2c8eec, #395b64);
+  color: #fff;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  font-size: 13px;
+  line-height: 20px;
+  position: absolute;
+  bottom: unset;
+  z-index: 0;
+}
+
+/*footer row*/
+.row {
+  width: 85%;
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/*footer-column*/
+.col {
+  flex-basis: 25%;
+  padding: 10px
+}
+
+.col:nth-child(2),
+.col:nth-child(3) {
+  flex-basis: 15%;
+}
+
+/*footer-headers*/
+.col h3 {
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative
+}
+
+/*footer-email*/
+#email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/*footer-nav*/
+.col ul {
+  display: block;
+}
+
+.col ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.col ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*footer-news*/
+#footer-form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+#footer-form .fa-envelope {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+#footer-form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+
+#footer-form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+#footer-form button .fa-newspaper {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.social-icons .fa-brands {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*form animations*/
+.underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+
+.underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    left: -20px;
   }
 
-  /* -----------------------------------*/
-  /* ---------->>> FOOTER <<<-----------*/
-  /* -----------------------------------*/
+  100% {
+    left: 100%;
+  }
+}
 
-  footer 
-  {
-    width: 100%;
-    background: linear-gradient(to left, #2c8eec,#395b64);
-    color: #fff;
-    padding: 100px 0 30px;
-    border-top-left-radius: 125px;
-    font-size: 13px;
-    line-height: 20px;
-    position: absolute;
-    bottom: unset;
-    z-index: 0; 
-  }
 
-  /*footer row*/
-  .row
-  {
-    width: 85%;
-    margin: auto;
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
+/* -----------------------------------*/
+/* ---------->>>Jobs showing<<<-----------*/
+/* -----------------------------------*/
+.jobs-list-container {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: "Rubik", sans-serif;
+}
 
-  /*footer-column*/
-  .col
-  {
-    flex-basis: 25%;
-    padding: 10px
-  }
-  
-  .col:nth-child(2), .col:nth-child(3)
-  {
-    flex-basis: 15%;
-  }
+.jobs-list-container h2 {
+  font-size: 30px;
+  border-left: 4px solid #023047;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
 
-  /*footer-headers*/
-  .col h3
-  { 
-    width: fit-content;
-    margin-bottom: 40px;
-    position: relative
-  }
+/*grid view, gap and shadow for the job containers*/
+.jobs-list-container .jobs-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
 
-  /*footer-email*/
-  #email-id
-  {
-    width: fit-content;
-    border-bottom: 1px solid #ccc;
-    margin: 20px 0;
-  }
+.jobs-list-container .jobs-container img {
+  width: 60px;
+}
 
-  /*footer-nav*/
-  .col ul
-  {
-    display: block;
-  }
+.jobs-list-container .job {
+  box-shadow: 0 4px 24px -7px rgba(2, 48, 71, 0.5);
+  padding: 25px;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 400ms ease;
+}
 
-  .col ul li
-  {  
-    list-style: none;
-    margin-bottom: 12px;
-  }
+.jobs-list-container .job:hover {
+  transform: scale(1.03);
+}
 
-  .col ul li a
-  {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  /*footer-news*/
-  #footer-form
-  {
-    padding-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 50px;
-  }
+.jobs-list-container .open-postion {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  color: red;
+}
 
-  #footer-form .fa-envelope
-  {
-    font-size: 18px;
-    margin-right: 10px;
-  }
+.jobs-list-container .job-title {
+  font-size: 20px;
+  padding: 10px 0;
+  margin: 0;
+  color: darkgreen;
+}
 
-  #footer-form input 
-  {
-    width: 100%;
-    background: transparent;
-    color: #ccc;
-    border: 0;
-    outline: none;
-  }
+.jobs-list-container .details {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #395b64;
+  line-height: 1.8;
+}
 
-  #footer-form button
-  {
-    background: transparent;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-  }
+.jobs-list-container .Details-btn,
+.Apply-btn {
+  text-decoration: none;
+  border: 1px solid blue;
+  color: black;
+  flex: 1;
+  padding: 8px 16px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  transition: all 400ms ease;
+}
 
-  #footer-form button .fa-newspaper
-  {
-    font-size: 16px;
-    color: #ccc;
-  }
+.jobs-list-container .Details-btn {
+  margin-top: 20px;
+}
 
-  .social-icons .fa-brands 
-  {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
-    color: #000;
-    background: #fff;
-    margin-right: 15px;
-    cursor: pointer;
-  }
+.jobs-list-container .Details-btn:hover,
+.Apply-btn:hover {
+  background: darkblue;
+  color: white;
+}
 
-  hr
-  {
-    width: 90%;
-    border: 0;
-    border-bottom: 1px solid #ccc;
-    margin: 20px auto;
-  }
+/* -----------------------------------*/
+/* ---------->>>Jobs Applying<<<-----------*/
+/* -----------------------------------*/
 
-  .copyright 
-  {
-    text-align: center;
-  }
+/*Personal Information */
+/*style header and font for web*/
+.job-applying-container {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #eeecec;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  .copyright a
-  {
-    text-decoration: none;
-    color: #fff;
-  }
+.job-applying-container h1 {
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
 
-  /*form animations*/
-  .underline
-  {
-    width: 100%;
-    height: 5px;
-    background: #767676;
-    border-radius: 3px;
-    position: absolute;
-    top: 25px;
-    left: 0;
-    overflow: hidden;
-  }
+.applying-basic-info h2 {
+  text-align: left;
+  font-size: 20px;
+}
 
-  .underline span 
-  {
-    width: 15px;
-    height: 100%;
-    background: #fff;
-    border-radius: 3px;
-    position: absolute;
-    top: 0;
-    left: 10px;
-    animation: moving 2s linear infinite;
-  }
+.applying-basic-info label {
+  margin-top: 1em;
+  display: block;
+  float: left;
+  font-size: 15px;
+  cursor: default;
+}
 
-  @keyframes moving 
-  {
-    0%
-    {
-      left: -20px;
-    }
-    100%
-    {
-      left: 100%;
-    }
-  }
+.applying-basic-info label::before {
+  content: "* ";
+  color: red;
+}
 
-      
-  /* -----------------------------------*/
-  /* ---------->>>Jobs showing<<<-----------*/
-  /* -----------------------------------*/
-  .jobs-list-container
-  {
-    max-width: 900px;
-    margin: 20px auto;
-    font-family: "Rubik", sans-serif;
-  }
-
-  .jobs-list-container h2
-  {
-    font-size: 30px;
-    border-left: 4px solid #023047;
-    padding-left: 20px;
-    margin-bottom: 15px;
-  }
-
-  /*grid view, gap and shadow for the job containers*/
-  .jobs-list-container .jobs-container
-  {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .jobs-list-container .jobs-container img
-  {
-    width: 60px;
-  }
-
-  .jobs-list-container .job
-  {
-    box-shadow: 0 4px 24px -7px rgba(2, 48, 71, 0.5);
-    padding: 25px;
-    border-radius: 16px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    transition: all 400ms ease;
-  } 
-
-  .jobs-list-container .job:hover 
-  {
-    transform: scale(1.03);
-  }
-
-  .jobs-list-container .open-postion
-  {
-    position: absolute;
-    top: 40px;
-    right: 20px;
-    color: red;
-  }
-
-  .jobs-list-container .job-title
-  {
-    font-size: 20px;
-    padding: 10px 0;
-    margin: 0;
-    color: darkgreen;
-  }
-
-  .jobs-list-container .details
-  {
-    margin-top:6px;
-    font-size: 14px;
-    color:#395b64;
-    line-height: 1.8;
-  }
-
-  .jobs-list-container .Details-btn, .Apply-btn
-  {
-    text-decoration: none;
-    border: 1px solid blue;
-    color: black;
-    flex: 1;
-    padding: 8px 16px;
-    text-align: center;
-    border-radius: 8px;
-    margin-bottom: 5px;
-    transition: all 400ms ease;
-  }
-
-  .jobs-list-container .Details-btn
-  {
-    margin-top: 20px;
-  }
-
-  .jobs-list-container .Details-btn:hover, .Apply-btn:hover
-  {
-    background: darkblue;
-    color: white;
-  }
-
-  /* -----------------------------------*/
-  /* ---------->>>Jobs Applying<<<-----------*/
-  /* -----------------------------------*/
-  fieldset {
-    display: block;
-    margin:0 auto;
-    margin-top: 50px;
-    padding-top: 0.35em;
-    padding-bottom: 0.625em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    border: 2px groove (internal value);
-    width: 30em;
-    font-size: 20px;
-    border-radius: 3em;
-  }
-  /*style header and font for web*/
-  .job-applying-container
-  {
-    font-family: "Rubik", sans-serif;
-    text-align: center;
-    
-  }
-  .job-applying-container h1
-  {
-    margin-top: 0.5em;
-    text-align: center;
-    font-size: 50px;
-  }
-  .applying-basic-info legend
-  {
-    text-align: left;
-    font-size: 25px;
-  }
-  .applying-basic-info label
-  {
-    display: block;
-    float: left;
-    right:5%;
-    margin: 0.5em;
-    font-size: 18px;
-  }
-  
-  .applying-basic-info input, select
-  {
-    margin: 0.5em;
-    height: 2em;
-    float: right;
-    margin-top: 0.2em;
-  }
-  .container
-  {
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    user-select: none;
-  }
-  .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-  .checkmark {
-    display: absolute;
-    top: 0;
-    left: 20px;
-    height: 20px;
-    width: 20px;
-    border-radius: 3em;
-    background-color: #8b9199;
-    
-  }
-  .container:hover input ~ .checkmark {
-    background-color: #36383b;
-  }
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  .container .checkmark:after {
-    left: 4px;
-    width: 7px;
-    height: 10px;
-    content: "X";
-  }
-  .gender label
-  {
-    display: inline-block;
-    margin-left: 2em;
-  }
-  .gender .checkmark
-  {
-    position: absolute;
-    top: 0;
-    left: 5px;
-    background-color: #8b9199;
-  }
-  .skill_list .checkmark
-  {
-    position: absolute;
-    left: 550px;
-    background-color: #8b9199;
-  }
-  input[type="text"]  
-  {
-    border-radius: 0.5em;
-    text-indent: 0.5em;
-    font-size: 15px;
-  }
- #cv_upload
-  {
-    position: relative;
-    left:160px;
-  }
-#apply
+.applying-basic-info input
 {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  height: 25px;
+  font-size: 15px;
+  border: 1px solid black;
+}
+
+hr {
+  width: 100%;
+  /* Set width to 100% of the container */
+  height: 0.1px;
+  /* Set thickness to 2px */
+  background-color: #bdbbbb;
+  border: none;
+  margin-top: 2px;
+  /* Remove default border */
+
+}
+
+#asterisk {
+  text-align: left;
+  font-size: 12px;
+}
+
+#asterisk::before {
+  content: "*";
+  color: #ff0000;
+}
+
+/*First Name and Last Name division */
+.name-container {
+  display: flex;
+}
+
+.name-container div {
+  display: block;
+  flex-direction: column;
+  columns: 600px;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.name-container #last_name {
+  margin-left: 20px;
+}
+
+.name-container label {
+  margin-bottom: 5px;
+}
+
+.name-container input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  border-radius: 0.3em;
+  text-indent: 0.3em;
+}
+
+/* Gender Chosen Customzie */
+fieldset {
+  display: block;
+  text-align: left;
+  margin-top: 20px;
+  border: 2px groove (internal value);
+  width: 10em;
+  font-size: 20px;
+  border-radius: 1em;
+}
+
+.gender legend::before {
+  content: "* ";
+  color: red;
+}
+
+.gender .container::before {
+  content: none;
+}
+
+.gender .container {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.gender .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.gender .checkmark {
+  display: absolute;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 3em;
+  background-color: #8b9199;
+}
+
+/* State customize */
+select {
+  position: relative;
+  top: 15px;
+  left: 180px;
+  width: 150px;
+}
+
+/*Skill lists*/
+
+.skill_list h2::before {
+  content: "* ";
+  color: red;
+}
+
+.skill_list h2 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.skill_list label::before {
+  content: none;
+}
+
+.skill_list .container {
+  position: relative;
+  margin-bottom: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.skill_list .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.skill_list .checkmark {
+  display: absolute;
+  position: absolute;
+  top: 0;
+  left: 530px;
+  height: 20px;
+  width: 20px;
+  border-radius: 3em;
+  background-color: #8b9199;
+}
+
+.container:hover input~.checkmark {
+  background-color: #36383b;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 5px;
+  top: 1.5px;
+  width: 7px;
+  height: 10px;
+  content: "X";
+}
+.job-applying-container textarea::placeholder
+{
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.job-applying-container textarea
+{
+  padding: 5px;
+  text-indent: 9px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.upload-cv label {
+  position: relative;
+  left: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+.upload-cv :hover
+{
+  cursor: pointer;
+}
+input[type=file]
+{
+  font-size: 15px;
+  height: 40px;
+}
+#apply {
   position: relative;
   font-size: 20px;
-  width: 30em;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 25em;
+  height: 40px;
+  cursor: pointer;
 }
-  /* -----------------------------------*/
-  /* ---------->>> RESPONSIVE <<<-----------*/
-  /* -----------------------------------*/
-  @media screen and (max-width: 600px) {
-    /*Navigation*/
-    label {
-      display: block;
-    }
-  
-    ul {
-      font-size: 1.2em;
-      position: absolute;
-      left: -100%;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #333333;
-      gap: 2em;
-      top: 60px;
-      width: 100%;
-      height: calc(100vh - 60px);
-      transition: 0.5s;
-      z-index: 1; /* Set z-index to 1 */
-    }
-  
-    input[type="checkbox"]:checked ~ ul {
-      left: 0;
-    }
-  
-    ul a:hover {
-      background-color: #2c8eec;
-    }
 
-    /*footer*/
-    footer
-    {
-      bottom: unset;
-      z-index: 0;
-    }
+/* -----------------------------------*/
+/* ---------->>> RESPONSIVE <<<-----------*/
+/* -----------------------------------*/
+@media screen and (max-width: 600px) {
 
-    .col
-    {
-      flex-basis: 100%;
-    }
-    
-    .col:nth-child(2), .col:nth-child(3)
-    {
-      flex-basis: 100%;
-    }
-
+  /*Navigation*/
+  label {
+    display: block;
   }
+
+  ul {
+    font-size: 1.2em;
+    position: absolute;
+    left: -100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    gap: 2em;
+    top: 60px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    transition: 0.5s;
+    z-index: 1;
+    /* Set z-index to 1 */
+  }
+
+  input[type="checkbox"]:checked~ul {
+    left: 0;
+  }
+
+  ul a:hover {
+    background-color: #2c8eec;
+  }
+
+  /*footer*/
+  footer {
+    bottom: unset;
+    z-index: 0;
+  }
+
+  .col {
+    flex-basis: 100%;
+  }
+
+  .col:nth-child(2),
+  .col:nth-child(3) {
+    flex-basis: 100%;
+  }
+
+}
