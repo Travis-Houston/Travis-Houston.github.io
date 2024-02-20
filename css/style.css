@@ -164,12 +164,10 @@ nav ul a:hover {
 .job-applying-container {
   font-family: "Rubik", sans-serif;
   text-align: center;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
-  max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #eeecec;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -187,6 +185,7 @@ nav ul a:hover {
 
 .applying-basic-info label {
   margin-top: 1em;
+  margin-bottom: 0.4em;
   display: block;
   float: left;
   font-size: 15px;
@@ -265,7 +264,7 @@ fieldset {
   border: 2px groove (internal value);
   width: 10em;
   font-size: 20px;
-  border-radius: 1em;
+  border-radius: 0.3em;
 }
 
 .gender legend::before {
@@ -301,16 +300,20 @@ fieldset {
   left: 10px;
   height: 20px;
   width: 20px;
-  border-radius: 3em;
+  border-radius: 0.3em;
   background-color: #8b9199;
   transition: background-color 0.3s;
 }
 
+#blank
+{
+  visibility: hidden;
+}
 /* State customize */
 select {
   position: relative;
+  float: right;
   top: 15px;
-  left: 180px;
   width: 150px;
 }
 
@@ -331,10 +334,14 @@ select {
 }
 
 .skill_list .container {
+  
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 0.5em;
+  
   cursor: pointer;
   user-select: none;
+  width: 100%;
+  text-align: left;
 }
 
 
@@ -347,13 +354,13 @@ select {
 }
 
 .skill_list .checkmark {
-  display: absolute;
-  position: absolute;
+  position: relative;
+  float: right;
   top: 0;
-  left: 530px;
   height: 20px;
+  margin-left: 20px;
   width: 20px;
-  border-radius: 3em;
+  border-radius: 0.3em;
   background-color: #8b9199;
   transition: background-color 0.3s;
 }
@@ -374,7 +381,7 @@ select {
 }
 .container .checkmark:after {
   content: "\2713";
-  color: #007bff;
+  color: #ffffff;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -393,13 +400,13 @@ input:checked +.checkmark
   padding: 5px;
   text-indent: 9px;
   font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 
 .upload-cv label {
   position: relative;
-  left: 50px;
-  text-align: center;
   font-size: 18px;
+  width: 100%;
 }
 .upload-cv label::before
 {
@@ -412,7 +419,9 @@ input:checked +.checkmark
 input[type=file] {
   font-size: 15px;
   height: 40px;
-  text-align: center;
+  position: relative;
+  float: right;
+  width: 100%;
 }
 
 #apply {
@@ -420,7 +429,7 @@ input[type=file] {
   font-size: 20px;
   padding-top: 0;
   padding-bottom: 0;
-  width: 25em;
+  width: 100%;
   height: 40px;
   cursor: pointer;
 
@@ -595,7 +604,33 @@ hr {
   }
 }
 
+/* -----------------------------------*/
+/* ---------->>> Job Applying Responsive <<<-----------*/
+/* -----------------------------------*/
+@media screen and (max-width: 768px) {
+  .job-applying-container {
+    max-width: 500px;
+    box-sizing: border-box;
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 500px) {
 
+  .job-applying-container h1
+ {
+  font-size: 190%;
+ }
+}
+@media screen and (max-width: 375px) {
+  .job-applying-container h1
+ {
+  font-size: 150%;
+ }
+ input[type="file"]
+ {
+  font-size: 70%;
+ }
+}
 
 /* -----------------------------------*/
 /* ---------->>> RESPONSIVE <<<-----------*/
