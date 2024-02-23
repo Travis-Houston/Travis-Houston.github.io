@@ -254,7 +254,12 @@ hr {
   margin-bottom: 10px;
 }
 
-
+/* DOB Edit */
+input[type="date"]
+{
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+}
 
 /* Gender Chosen Customzie */
 fieldset {
