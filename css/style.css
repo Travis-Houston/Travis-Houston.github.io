@@ -120,7 +120,7 @@ nav ul a:hover
   justify-content: flex-end;
   background-image: url("/images/Placeholder2.jpeg");
   background-position: 50% 0%;
-  height: 600px !important;
+  height: 550px !important;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -227,11 +227,13 @@ nav ul a:hover
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.job-applying-container h1 {
+#applyh1{
+  font-family: "Rubik", sans-serif;
   padding: 10px;
   text-align: center;
-  font-size: 35px;
-  margin-bottom: 10px;
+  font-size: 60px;
+  color: white;
+  margin-bottom: 200px;
 }
 
 .applying-basic-info h2 {
@@ -368,14 +370,22 @@ fieldset {
 
 #blank
 {
+  height: 5px;
+  margin-bottom: 0;
   visibility: hidden;
 }
 /* State customize */
-select {
+#statecuztomize
+{
+  position: relative;
+  margin-top: 21px;
+}
+select { 
   position: relative;
   float: right;
+  margin-top: 5px;
   top: 15px;
-  width: 150px;
+  width: 100%;
 }
 
 /*Skill lists*/
@@ -468,6 +478,7 @@ input:checked +.checkmark
   position: relative;
   font-size: 18px;
   width: 100%;
+  margin-top: 20px;
 }
 .upload-cv label::before
 {
@@ -476,12 +487,11 @@ input:checked +.checkmark
 .upload-cv :hover {
   cursor: pointer;
 }
-
 input[type=file] {
   font-size: 15px;
   height: 40px;
   position: relative;
-  float: right;
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -676,23 +686,48 @@ hr {
   }
 }
 @media screen and (max-width: 500px) {
-
-  .job-applying-container h1
+  .name-container
+  {
+    display: block;
+  }
+  .name-container div
+  {
+    margin-right: 0px;
+  }
+  .name-container #last_name{
+    position: relative;
+    margin-left: 0px;
+  }
+  .name-container input{
+    display: block;
+    width: 100%;
+  }
+  #applyh1
  {
-  font-size: 190%;
+  font-size: 240%;
+  margin-bottom: 240px;
  }
 }
 @media screen and (max-width: 375px) {
-  .job-applying-container h1
+  #applyh1
  {
-  font-size: 150%;
+  font-size: 210%;
  }
  input[type="file"]
  {
   font-size: 70%;
  }
 }
-
+@media screen and (max-width: 320px) {
+  #applyh1
+ {
+  font-size: 180%;
+ }
+ .job-applying-container .applying-basic-info h2
+ {
+  font-size: 90%;
+ }
+ }
 /* -----------------------------------*/
 /* ---------->>> RESPONSIVE <<<-----------*/
 /* -----------------------------------*/

@@ -31,16 +31,13 @@
           <li><a href="apply.html">Job Application</a></li>
         </ul>
       </nav>
-      <div class="banner"></div>
-  <div class="job-applying-container">
-
-    <h1>Job Application Form</h1>
+      <div class="banner"><h1 id="applyh1">Job Application Form</h1></div>
+    <div class="job-applying-container">
 <!--Please remember to required all the forms - Tam Tong-->
-    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
-
       <div class="applying-basic-info">
         <h2>Personal Information</h2>
         <hr>
+        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
         <p id="asterisk">Required fields</p>
         <label for="job_ref_num"> Job Reference Number</label>
         <input type="text" name="job_ref_num" id="job_ref_num" size="20" pattern="[a-zA-Z0-9]{5}"
@@ -84,7 +81,7 @@
         <input type="text" name="suburb_town" id="suburb_town" size="30" maxlength="40" >
 
         
-        <label for="state">State</label>
+        <label id="statecuztomize" for="state">State</label>
         
         <select name="state" id="state" >
           <option value="">Please Select</option>
