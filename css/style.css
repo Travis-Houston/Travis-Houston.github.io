@@ -436,10 +436,6 @@ select {
   transition: background-color 0.3s;
 }
 
-.container:hover input~.checkmark {
-  background-color: #36383b;
-}
-
 .checkmark:after {
   content: "";
   position: absolute;
