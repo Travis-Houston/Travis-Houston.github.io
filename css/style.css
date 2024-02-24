@@ -971,7 +971,6 @@ input[type=file] {
 
 }
 
-
 @media screen and (max-width: 684px) {
 
 
@@ -1128,7 +1127,43 @@ input[type=file] {
 
 }
 
-
+@media screen and (max-width: 320px) {
+  /*Reduce IMG size (Don't know how)*/
+  .jobs-list-container .jobs-container .job-title
+  {
+    font-size: 150%;
+  }
+  .jobs-list-container .jobs-container .job .open-postion
+  {
+    font-size: 150%;
+  }
+  .jobs-list-container .jobs-container .details h4
+  {
+    font-size: 130%;
+  }
+  .jobs-list-container .details ul
+  {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 250px){
+  .jobs-list-container .jobs-container .job-title
+  {
+    font-size: 120%;
+  }
+  .jobs-list-container .jobs-container .job .open-postion
+  {
+    font-size: 100%;
+  }
+  .jobs-list-container .jobs-container .details h4
+  {
+    font-size: 100%;
+  }
+  .jobs-list-container .details ul
+  {
+    font-size: 10px;
+  }
+} 
 /* -----------------------------------*/
 /* ---------->>> GLOBAL <<<-----------*/
 /* -----------------------------------*/
