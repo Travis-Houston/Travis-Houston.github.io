@@ -45,40 +45,35 @@ nav a {
 
 
 .statitics ul{
-display: flex;
-flex-wrap: wrap;
-list-style-type: none;
-justify-content: space-evenly;
-/* padding: 60px; */
-
-
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
 }
+
 .statitics ul li {
-align-content: space-around;
-
-line-height: 50px;
-text-align: center;
-
-
+  align-content: space-around;
+  line-height: 50px;
+  text-align: center;
 }
 
-.statitics ul li p{
-font-size: 5em;
-margin: 60px;
-}
 
 .statitics ul li hr{
-box-sizing: border-box;
-margin-top: 2em;
-margin-bottom: 0.5em;
-margin-left: auto;
-margin-right: auto;
-border-style: inset;
-width:20%;
-border-color:red;
+  box-sizing: border-box;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  width: 50%;
 }
 
-
+hr
+{
+  width: 90%;
+  border: 0;
+  border-bottom: 5px solid #ccc;
+  margin: 20px auto;
+}
 
 /*Logo*/
 .logo
@@ -120,35 +115,34 @@ nav ul a:hover
 }
 
 .banner {
-  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   background-image: url("/images/Placeholder2.jpeg");
   background-position: 50% 0%;
-  height: 600px !important;
+  height: 550px !important;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 
 /*Analysis table*/
-.analysis_table{
+section h1{
+  font-size: 3em;
+}
+section{
   font-weight: bolder;
   font-size: large;
   text-align: center;
   color: black;
 }
 
-.analysis_table h1 {
-  font-size: 50px; 
-}
 
 
 #countdown1,
 #countdown2,
 #countdown3,
 #countdown4 {
-  animation: counter-hover 0.5s alternate ease-in-out; /* Adjust duration */
+  animation: counter-hover 0.5s alternate ease-in-out;
   counter-reset: num var(--num);
   font: 800 5rem system-ui;
   padding: 1rem;
@@ -167,11 +161,7 @@ nav ul a:hover
 #countdown2 { --num: 120; }
 #countdown3 { --num: 8256; }
 #countdown4 { --num: 100; }
-@property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
+
 
 
 @keyframes counter-hover {
@@ -183,6 +173,8 @@ nav ul a:hover
   }
 }
 
+
+/* Change color icon */
 .material-symbols-outlined{
 color: black;
 }
@@ -203,17 +195,16 @@ color: inherit;
 margin-bottom: 60px; 
 }
 
-.section-head h4 {
+.section-head h2 {
 position: relative;
 line-height: 2;
 letter-spacing: 0.5px;
 font-size: 35px;
-font-weight: 700; 
 text-align: center;
 margin-bottom: 30px;
 }
 
-.section-head h4::before {
+.section-head h2::before {
 content: '';
 width: 100px;
 height: 5px;
@@ -224,10 +215,7 @@ left: 50%;
 transform: translateX(-50%); 
 }
 
-.section-head h4 span {
-font-weight: 700;
-color: #2f2f2f; 
-}
+
 
 /* Feature Styles */
 #big_box {
@@ -259,7 +247,6 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 
-
 .item .icon {
 font-size: 40px;
 margin-bottom: 25px;
@@ -281,7 +268,7 @@ border-radius: 50%;
 
 /* Remaining Styles */ 
 .item p { font-size: 15px; line-height: 26px;}
-.item h6 { margin-bottom: 20px; color: #2f2f2f;}  
+
 
 
 
@@ -307,7 +294,7 @@ footer
 /*footer row*/
 .row
 {
-  width: 85%;
+  width: 90%;
   margin: auto;
   justify-content: space-between;
   display: flex;
@@ -333,6 +320,10 @@ footer
   width: fit-content;
   margin-bottom: 25px;
   position: relative
+}
+
+.col h4 {
+ margin-bottom: 10px;  /* spacing each mail contact */
 }
 
 /*footer-email*/
@@ -415,13 +406,7 @@ footer
   cursor: pointer;
 }
 
-hr
-{
-  width: 90%;
-  border: 0;
-  border-bottom: 1px solid #ccc;
-  margin: 20px auto;
-}
+
 
 .copyright 
 {
@@ -571,13 +556,13 @@ hr
 /* -----------------------------------*/
 /* ---------->>> RESPONSIVE <<<-----------*/
 /* -----------------------------------*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 667px) {
   /*Navigation*/
   label {
     display: block;
   }
 
-  ul {
+#nav_bar{     /* conflict error with ul in navigation bar */ /* => change the id of ul in nav_bar*/
     font-size: 1.2em;
     position: absolute;
     left: -100%;
@@ -593,7 +578,7 @@ hr
     z-index: 1; /* Set z-index to 1 */
   }
 
-  input[type="checkbox"]:checked ~ ul {
+  input[type="checkbox"]:checked ~ #nav_bar { 
     left: 0;
   }
 
@@ -614,4 +599,29 @@ hr
     flex-basis: 100%;
   }
 
+
 }
+
+
+@media screen and (max-width: 684px) {
+
+
+  .banner{
+    height: 910px !important;
+  }
+
+
+  .statitics ul{
+    display: block;
+    flex-wrap: wrap;
+    /* padding: 60px; */
+
+}
+
+  /* why choose us */
+  .section-head h2{
+    font-size: 25px; 
+  }
+}
+
+
