@@ -49,6 +49,7 @@ nav a {
 
 .statitics h1
 {
+  font-family: "Poppins", sans-serif;
   color:white;
   text-align: center;
 }
@@ -62,9 +63,10 @@ nav a {
 
 .statitics ul li {
   align-content: space-around;
-  line-height: 50px;
+  line-height: 40px;
   text-align: center;
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 
@@ -861,170 +863,92 @@ input[type=file] {
 
 
 /* -----------------------------------*/
-/* ---------->>> FOOTER <<<-----------*/
+/* ---------->>> About Us <<<-----------*/
 /* -----------------------------------*/
-
-footer {
-  width: 100%;
-  background: linear-gradient(to left, #2c8eec, #395b64);
-  color: #fff;
-  padding: 100px 0 30px;
-  border-top-left-radius: 125px;
-  font-size: 13px;
-  line-height: 20px;
-  position: absolute;
-  bottom: unset;
-  z-index: 0;
+.about-container 
+{
+  text-align: center;
+  background:white;
 }
 
-/*footer row*/
-.row {
-  width: 85%;
+.about-header
+{
+  padding-top: 30px;
+  color: #444;
+  font-size: 20px;
   margin: auto;
-  justify-content: space-between;
+  line-height: 50px;
+}
+
+.sub-container
+{
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  justify-content: center;
 }
 
-/*footer-column*/
-.col {
-  flex-basis: 25%;
-  padding: 10px
-}
-
-.col:nth-child(2),
-.col:nth-child(3) {
-  flex-basis: 15%;
-}
-
-/*footer-headers*/
-.col h3 {
-  width: fit-content;
-  margin-bottom: 40px;
-  position: relative
-}
-
-/*footer-email*/
-#email-id {
-  width: fit-content;
-  border-bottom: 1px solid #ccc;
-  margin: 20px 0;
-}
-
-/*footer-nav*/
-.col ul {
-  display: block;
-}
-
-.col ul li {
-  list-style: none;
-  margin-bottom: 12px;
-}
-
-.col ul li a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/*footer-news*/
-#footer-form {
-  padding-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 50px;
-}
-
-#footer-form .fa-envelope {
-  font-size: 18px;
-  margin-right: 10px;
-}
-
-#footer-form input {
-  width: 100%;
-  background: transparent;
-  color: #ccc;
-  border: 0;
-  outline: none;
-}
-
-#footer-form button {
-  background: transparent;
-  border: 0;
-  outline: none;
+.teams
+{
+  margin: 10px;
+  padding: 22px;
+  max-width: 30%;
   cursor: pointer;
+  transition: 0.4s;
+  box-sizing: border-box;
+  line-break: auto;
 }
 
-#footer-form button .fa-newspaper {
+.teams:hover 
+{
+  background: #ddd;
+  border-radius: 12px;
+}
+
+.teams img 
+{
+  width: 200px;
+  height: 200px;
+}
+
+.name
+{
+  padding: 12px;
+  font-weight: bold;
   font-size: 16px;
-  color: #ccc;
+  text-transform: uppercase;
 }
 
-.social-icons .fa-brands {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 40px;
-  font-size: 20px;
-  color: #000;
-  background: #fff;
-  margin-right: 15px;
-  cursor: pointer;
+.position
+{
+  font-style: italic;
+  color: #888;
 }
 
-hr {
-  width: 90%;
-  border: 0;
-  border-bottom: 1px solid #ccc;
-  margin: 20px auto;
+.profile-socials 
+{
+  margin: 14px;
 }
 
-.copyright {
-  text-align: center;
+.profile-socials a 
+{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  transition: .4s;
 }
 
-.copyright a {
-  text-decoration: none;
-  color: #fff;
+.profile-socials a:hover
+{
+  transform: scale(1.5);
 }
 
-/*form animations*/
-.underline {
-  width: 100%;
-  height: 5px;
-  background: #767676;
-  border-radius: 3px;
-  position: absolute;
-  top: 25px;
-  left: 0;
-  overflow: hidden;
+.profile-socials a i 
+{
+  color: #444;
 }
-
-.underline span {
-  width: 15px;
-  height: 100%;
-  background: #fff;
-  border-radius: 3px;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  animation: moving 2s linear infinite;
-}
-
-@keyframes moving {
-  0% {
-    left: -20px;
-  }
-
-  100% {
-    left: 100%;
-  }
-}
-
-
 /* -----------------------------------*/
 /* ---------->>> FOOTER <<<-----------*/
 /* -----------------------------------*/
@@ -1246,6 +1170,10 @@ hr {
     height: 1050px !important;
   }
 
+  .statitics h1
+  {
+    padding: 5px;
+  }
 
   .statitics ul{
     display: block;
@@ -1267,6 +1195,11 @@ hr {
   /* why choose us */
   .section-head h2{
     font-size: 25px; 
+  }
+
+  .teams 
+  {
+    max-width: 100%;
   }
 }
 
