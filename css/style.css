@@ -275,7 +275,7 @@ a {
   transition: all 0.5s ease;
 }
 .item:hover {
-  background: #8f8f8f;
+  background: #c7cfd1;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
