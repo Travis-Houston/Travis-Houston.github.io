@@ -275,9 +275,8 @@ a {
   margin-bottom: 30px;
   transition: all 0.5s ease;
 }
-
 .item:hover {
-  background: #a6def3;
+  background: #8f8f8f;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -911,29 +910,34 @@ input:checked+.checkmark {
 /* -----------------------------------*/
 
 .about-section{
-  background: url("/images/pic.jpg") no-repeat left;
+  background: url("/images/about-us.png") no-repeat left;
   background-size: 55%;
-  background-color: #626e75;
   overflow: hidden;
-  padding: 100px 0;
+  margin: 100px 0;
+  border-radius: 3em;
+  background-clip: padding-box;
 }
 
 .inner-container{
-  width: 40%;
+  width: 45%;
   float: right;
-  background-color: red;
+  background-color: #75828a;
   padding: 120px;
+  position: relative;
+  bottom: 0px;
+  
 }
 
 .inner-container h1{
   margin-bottom: 30px;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 900;
+  color: #f1f1f1;
 }
 
 .text{
-  font-size: 13px;
-  color: #545454;
+  font-size: 14px;
+  color: #f1f1f1;
   line-height: 30px;
   text-align: justify;
   margin-bottom: 40px;
@@ -943,7 +947,8 @@ input:checked+.checkmark {
   display: flex;
   justify-content: space-between;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
+  color: #f1f1f1;
 }
 
 .team-container {
@@ -953,7 +958,7 @@ input:checked+.checkmark {
 
 .team-header {
   padding-top: 30px;
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 20px;
   margin: auto;
   line-height: 50px;
@@ -986,11 +991,6 @@ input:checked+.checkmark {
   
   color: #000;
 }
-.teams:hover .name,
-.teams:hover .position
-{
-  transition: 0.8s;
-}
 .teams:hover {
   background: #faf8f8;
   border-radius: 12px;
@@ -1000,9 +1000,7 @@ input:checked+.checkmark {
   width: 250px;
   height: 250px;
   object-fit: cover;
-  
 }
-
 .name {
   padding: 12px;
   font-weight: bold;
