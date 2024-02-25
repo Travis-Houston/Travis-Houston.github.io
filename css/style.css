@@ -141,18 +141,15 @@ section {
 }
 
 
-
 #countdown1,
 #countdown2,
 #countdown3,
 #countdown4 {
-  animation: counter-hover 0.5s alternate ease-in-out;
+  animation: counter 1s alternate ease-in-out;
   counter-reset: num var(--num);
   font: 800 5rem system-ui;
   padding: 1rem;
-  color: white;
 }
-
 
 #countdown1::before,
 #countdown2::before,
@@ -183,7 +180,26 @@ section {
   }
 
   to {
-    --num: 90000;
+    --num: 9000;
+  }
+}
+
+#countdown1:hover,
+#countdown2:hover,
+#countdown3:hover,
+#countdown4:hover {
+  animation-name: counter-hover;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes counter-hover {
+  from {
+    --num: 60;
+  }
+
+  to {
+    --num: 9000;
   }
 }
 
@@ -584,6 +600,7 @@ footer {
   border-radius: 8px;
   margin-bottom: 20px;
   transition: all 400ms ease;
+  border: 2px solid black;
 }
 
 .jobs-list-container .jobs-container .job .Apply-btn {
@@ -971,182 +988,24 @@ input[type=file] {
   color: #444;
 }
 
-/* -----------------------------------*/
-/* ---------->>> FOOTER <<<-----------*/
-/* -----------------------------------*/
-
-footer {
-  width: 100%;
-  background: linear-gradient(to left, #2c8eec, #395b64);
-  color: #fff;
-  padding: 100px 0 30px;
-  border-top-left-radius: 125px;
-  font-size: 13px;
-  line-height: 20px;
-  position: absolute;
-  bottom: unset;
-  z-index: 0;
-}
-
-/*footer row*/
-.row {
-  width: 85%;
-  margin: auto;
-  justify-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-
-/*footer-column*/
-.col {
-  flex-basis: 25%;
-  padding: 10px
-}
-
-.col:nth-child(2),
-.col:nth-child(3) {
-  flex-basis: 15%;
-}
-
-/*footer-headers*/
-.col h3 {
-  width: fit-content;
-  margin-bottom: 40px;
-  position: relative
-}
-
-/*footer-email*/
-#email-id {
-  width: fit-content;
-  border-bottom: 1px solid #ccc;
-  margin: 20px 0;
-}
-
-/*footer-nav*/
-.col ul {
-  display: block;
-}
-
-.col ul li {
-  list-style: none;
-  margin-bottom: 12px;
-}
-
-.col ul li a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/*footer-news*/
-#footer-form {
-  padding-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 50px;
-}
-
-#footer-form .fa-envelope {
-  font-size: 18px;
-  margin-right: 10px;
-}
-
-#footer-form input {
-  width: 100%;
-  background: transparent;
-  color: #ccc;
-  border: 0;
-  outline: none;
-}
-
-#footer-form button {
-  background: transparent;
-  border: 0;
-  outline: none;
-  cursor: pointer;
-}
-
-#footer-form button .fa-newspaper {
-  font-size: 16px;
-  color: #ccc;
-}
-
-.social-icons .fa-brands {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 40px;
-  font-size: 20px;
-  color: #000;
-  background: #fff;
-  margin-right: 15px;
-  cursor: pointer;
-}
-
-hr {
-  width: 90%;
-  border: 0;
-  border-bottom: 1px solid #ccc;
-  margin: 20px auto;
-}
-
-.copyright {
-  text-align: center;
-}
-
-.copyright a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/*form animations*/
-.underline {
-  width: 100%;
-  height: 5px;
-  background: #767676;
-  border-radius: 3px;
-  position: absolute;
-  top: 25px;
-  left: 0;
-  overflow: hidden;
-}
-
-.underline span {
-  width: 15px;
-  height: 100%;
-  background: #fff;
-  border-radius: 3px;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  animation: moving 2s linear infinite;
-}
-
-@keyframes moving {
-  0% {
-    left: -20px;
-  }
-
-  100% {
-    left: 100%;
-  }
-}
 
 /* -----------------------------------*/
 /* ---------->>> RESPONSIVE <<<-----------*/
 /* -----------------------------------*/
 /*Laptop view*/
 @media screen and (max-width: 768px) {
-
+  .jobs-list-container
+  {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
   /*Navigation*/
   label {
     display: block;
   }
 
   #nav_bar {
+    /* The nav bar i
     /* conflict error with ul in navigation bar */
     /* => change the id of ul in nav_bar*/
     font-size: 1.2em;
@@ -1170,8 +1029,7 @@ hr {
   }
 
   /*Banner*/
-  .statitics h1
-  {
+  .statitics h1 {
     font-size: 43px;
   }
 
@@ -1201,7 +1059,10 @@ hr {
   }
 
 }
-
+footer
+{
+  left: 0px;
+}
 
 @media screen and (max-width: 684px) {
 
@@ -1232,13 +1093,44 @@ hr {
   }
 }
 
-@media screen and(max-width:425px) 
-{
-
-}
-
 @media screen and (max-width: 500px) {
 
+  .job-applying-container .applying-basic-info h2 {
+    font-size: 80%;
+  }
+
+  /*Reduce IMG size (Don't know how)*/
+  .jobs-list-container h2
+  {
+    font-size: 200%;
+  }
+  .jobs-list-container .jobs-container .job img
+  {
+    left: 15px;
+  }
+  .jobs-list-container .jobs-container .job-title {
+    font-size: 120%;
+    left: 15px;
+  }
+
+  .jobs-list-container .jobs-container .job .open-postion {
+    font-size: 100%;
+    right: 20px;
+  }
+
+  .jobs-list-container .jobs-container .details h4 {
+    font-size: 100%;
+  }
+
+  .jobs-list-container .details ul {
+    font-size: 12px;
+    left: 10px;
+  }
+  .jobs-list-container .jobs-container .job .Apply-btn
+  {
+    margin-left: 8px;
+  }
+  
   .name-container {
     display: block;
   }
@@ -1277,45 +1169,37 @@ hr {
   #applyh1 {
     font-size: 180%;
   }
+}
 
-  .job-applying-container .applying-basic-info h2 {
+@media screen and (max-width: 250px) {
+  .jobs-list-container h2 {
+    font-size: 200%;
+  }
+
+  .jobs-list-container .jobs-container .job-title {
+    font-size: 120%;
+    left: 0px;
+  }
+
+  .jobs-list-container .jobs-container .job .open-postion {
+    font-size: 100%;
+    right: 20px;
+  }
+
+  .jobs-list-container .jobs-container .details h4 {
     font-size: 90%;
   }
 
-    /*Reduce IMG size (Don't know how)*/
-    .jobs-list-container .jobs-container .job-title
-    {
-      font-size: 150%;
-    }
-    .jobs-list-container .jobs-container .job .open-postion
-    {
-      font-size: 150%;
-    }
-    .jobs-list-container .jobs-container .details h4
-    {
-      font-size: 130%;
-    }
-    .jobs-list-container .details ul
-    {
-      font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 250px){
-  .jobs-list-container .jobs-container .job-title
-  {
-    font-size: 120%;
-  }
-  .jobs-list-container .jobs-container .job .open-postion
-  {
-    font-size: 100%;
-  }
-  .jobs-list-container .jobs-container .details h4
-  {
-    font-size: 100%;
-  }
-  .jobs-list-container .details ul
-  {
+  .jobs-list-container .details ul {
+    left: 10px;
     font-size: 10px;
   }
-} 
+
+  .jobs-list-container .jobs-container .job img {
+    left: 0px;
+  }
+
+  .jobs-list-container .jobs-container .job .Apply-btn {
+    margin-left: 7px;
+  }
+}
