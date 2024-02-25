@@ -196,7 +196,6 @@ section {
   }
 }
 
-
 /* Change color icon */
 .material-symbols-outlined {
   color: black;
@@ -322,179 +321,190 @@ a {
   font-size: 15px;
   line-height: 26px;
 }
-
-
-
-
-
 /* -----------------------------------*/
-/* ---------->>> FOOTER <<<-----------*/
+/* ---------->>> About Us <<<-----------*/
 /* -----------------------------------*/
 
-footer {
-  width: 100%;
-  background: linear-gradient(to left, #262f33, #8c948f);
-  color: #fff;
-  padding: 100px 0 30px;
-  border-top-left-radius: 125px;
-  font-size: 13px;
-  line-height: 20px;
-  position: absolute;
-  bottom: unset;
-  z-index: 0;
+.about-section{
+  background: url("/images/about-us.png") no-repeat left;
+  background-size: 55%;
+  overflow: hidden;
+  margin: 100px 0;
+  border-radius: 3em;
+  background-clip: padding-box;
 }
 
-/*footer row*/
-.row {
-  width: 90%;
-  margin: auto;
+.inner-container{
+  width: 45%;
+  float: right;
+  background-color: #75828a;
+  padding: 120px;
+  position: relative;
+  bottom: 0px;
+  
+}
+
+.inner-container h1{
+  margin-bottom: 30px;
+  font-size: 35px;
+  font-weight: 900;
+  color: #f1f1f1;
+}
+
+.text{
+  font-size: 14px;
+  color: #f1f1f1;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.skills{
+  display: flex;
   justify-content: space-between;
+  font-weight: 700;
+  font-size: 14px;
+  color: #f1f1f1;
+}
+
+.team-container {
+  text-align: center;
+  background: #626e75;
+}
+
+.team-header {
+  padding-top: 30px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin: auto;
+  line-height: 50px;
+}
+
+.sub-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  justify-content: center;
 }
 
-/*footer-column*/
-.col {
-  flex-basis: 25%;
-  padding: 10px
-}
-
-.col:nth-child(2),
-.col:nth-child(3) {
-  flex-basis: 15%;
-}
-
-/*footer-headers*/
-.col h3 {
-  width: fit-content;
-  margin-bottom: 25px;
-  position: relative
-}
-
-.col h4 {
-  margin-bottom: 10px;
-  /* spacing each mail contact */
-}
-
-/*footer-email*/
-#email-id {
-  width: fit-content;
-  border-bottom: 1px solid #ccc;
-  margin: 20px 0px 10px 0px;
-}
-
-/*footer-nav*/
-.col ul {
-  display: block;
-}
-
-.col ul li {
-  list-style: none;
-  margin-bottom: 12px;
-}
-
-.col ul li a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/*footer-news*/
-#footer-form {
-  padding-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 50px;
-}
-
-
-#footer-form .fa-envelope {
-  font-size: 18px;
-  margin-right: 10px;
-}
-
-#footer-form input {
-  width: 100%;
-  background: transparent;
-  color: #ccc;
-  border: 0;
-  outline: none;
-}
-#footer-form input::placeholder {
-  color: rgb(240, 240, 240);
-}
-#footer-form button {
-  background: transparent;
-  border: 0;
-  outline: none;
+.teams {
+  margin: 10px;
+  padding: 22px;
+  max-width: 30%;
   cursor: pointer;
+  transition: 0.9s;
+  box-sizing: border-box;
+  line-break: auto;
+  border: 2px groove black;
+  border-radius: 1em;
+  background-color: #8b8b8b;
 }
-
-#footer-form button .fa-newspaper {
-  font-size: 16px;
-  color: #ccc;
-}
-
-.social-icons .fa-brands {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 40px;
-  font-size: 20px;
+.teams:hover .name,
+.teams:hover .position,
+.teams:hover .profile-socials {
+  
   color: #000;
-  background: #fff;
-  margin-right: 15px;
-  cursor: pointer;
+}
+.teams:hover {
+  background: #faf8f8;
+  border-radius: 12px;
 }
 
+.teams img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+.name {
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+}
 
+.position {
+  font-style: italic;
+  color: white;
+}
 
-.copyright {
+.profile-socials {
+  margin: 14px;
+  color: white;
+}
+
+.profile-socials a {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  transition: 0.4s;
+}
+
+.profile-socials a:hover {
+  transform: scale(1.5);
+}
+
+.profile-socials a i {
+  color: #444;
+}
+
+/* -----------------------------------*/
+/* ---------->>>ENHANCEMENTS<<<-----------*/
+/* -----------------------------------*/
+.enhancements
+{
+  font-family: "Rubik", sans-serif;
+  max-width: 900px;
+  word-wrap: break-word;
+  margin: 20px auto;
+  box-shadow: 0 4px 24px -7px rgba(2, 48, 71, 0.5);
+  padding: 25px;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 400ms ease;
+  background-color: rgb(230, 230, 230);
+}
+.enhancements h2
+{
+  margin-top: 5px;
+  margin-bottom: 20px;
   text-align: center;
+  font-size: 40px;
 }
-
-.copyright a {
-  text-decoration: none;
-  color: #fff;
+.enhancements:hover
+{
+  transform: scale(1.03);
 }
-
-/*form animations*/
-.underline {
-  width: 100%;
-  height: 5px;
-  background: #767676;
-  border-radius: 3px;
-  position: absolute;
-  top: 25px;
-  left: 0;
-  overflow: hidden;
+.enhancements-list
+{
+  position: relative;
+  left: 20px;
+  margin-bottom: 40px;
 }
-
-.underline span {
-  width: 15px;
-  height: 100%;
-  background: #fff;
-  border-radius: 3px;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  animation: moving 2s linear infinite;
+.enhancements-list li
+{
+  padding-bottom: 20px;
 }
-
-@keyframes moving {
-  0% {
-    left: -20px;
-  }
-
-  100% {
-    left: 100%;
-  }
+#first-enhancement-pic
+{
+  width: 800px;
 }
-
-
+#second-enhancement-pic
+{
+  width: 800px;
+}
+#fourth-enhancement-pic
+{
+  width: 800px;
+}
+#fifth-enhancement-pic
+{
+  width: 800px;
+}
 /* -----------------------------------*/
 /* ---------->>>Jobs showing<<<-----------*/
 /* -----------------------------------*/
@@ -905,134 +915,174 @@ input:checked+.checkmark {
 }
 
 
+
 /* -----------------------------------*/
-/* ---------->>> About Us <<<-----------*/
+/* ---------->>> FOOTER <<<-----------*/
 /* -----------------------------------*/
 
-.about-section{
-  background: url("/images/about-us.png") no-repeat left;
-  background-size: 55%;
-  overflow: hidden;
-  margin: 100px 0;
-  border-radius: 3em;
-  background-clip: padding-box;
+footer {
+  width: 100%;
+  background: linear-gradient(to left, #262f33, #8c948f);
+  color: #fff;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  font-size: 13px;
+  line-height: 20px;
+  position: absolute;
+  bottom: unset;
+  z-index: 0;
 }
 
-.inner-container{
-  width: 45%;
-  float: right;
-  background-color: #75828a;
-  padding: 120px;
-  position: relative;
-  bottom: 0px;
-  
-}
-
-.inner-container h1{
-  margin-bottom: 30px;
-  font-size: 35px;
-  font-weight: 900;
-  color: #f1f1f1;
-}
-
-.text{
-  font-size: 14px;
-  color: #f1f1f1;
-  line-height: 30px;
-  text-align: justify;
-  margin-bottom: 40px;
-}
-
-.skills{
-  display: flex;
+/*footer row*/
+.row {
+  width: 90%;
+  margin: auto;
   justify-content: space-between;
-  font-weight: 700;
-  font-size: 14px;
-  color: #f1f1f1;
-}
-
-.team-container {
-  text-align: center;
-  background: #626e75;
-}
-
-.team-header {
-  padding-top: 30px;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  margin: auto;
-  line-height: 50px;
-}
-
-.sub-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 30px 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  align-items: flex-start;
 }
 
-.teams {
-  margin: 10px;
-  padding: 22px;
-  max-width: 30%;
+/*footer-column*/
+.col {
+  flex-basis: 25%;
+  padding: 10px
+}
+
+.col:nth-child(2),
+.col:nth-child(3) {
+  flex-basis: 15%;
+}
+
+/*footer-headers*/
+.col h3 {
+  width: fit-content;
+  margin-bottom: 25px;
+  position: relative
+}
+
+.col h4 {
+  margin-bottom: 10px;
+  /* spacing each mail contact */
+}
+
+/*footer-email*/
+#email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0px 10px 0px;
+}
+
+/*footer-nav*/
+.col ul {
+  display: block;
+}
+
+.col ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.col ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*footer-news*/
+#footer-form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+
+#footer-form .fa-envelope {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+#footer-form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+#footer-form input::placeholder {
+  color: rgb(240, 240, 240);
+}
+#footer-form button {
+  background: transparent;
+  border: 0;
+  outline: none;
   cursor: pointer;
-  transition: 0.9s;
-  box-sizing: border-box;
-  line-break: auto;
-  border: 2px groove black;
-  border-radius: 1em;
-  background-color: #8b8b8b;
-}
-.teams:hover .name,
-.teams:hover .position,
-.teams:hover .profile-socials {
-  
-  color: #000;
-}
-.teams:hover {
-  background: #faf8f8;
-  border-radius: 12px;
 }
 
-.teams img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-}
-.name {
-  padding: 12px;
-  font-weight: bold;
+#footer-form button .fa-newspaper {
   font-size: 16px;
-  text-transform: uppercase;
-  color: white;
+  color: #ccc;
 }
 
-.position {
-  font-style: italic;
-  color: white;
+.social-icons .fa-brands {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
-.profile-socials {
-  margin: 14px;
-  color: white;
+
+
+.copyright {
+  text-align: center;
 }
 
-.profile-socials a {
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  transition: 0.4s;
+.copyright a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.profile-socials a:hover {
-  transform: scale(1.5);
+/*form animations*/
+.underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
 }
 
-.profile-socials a i {
-  color: #444;
+.underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
 }
+
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
 
 
 /* -----------------------------------*/
