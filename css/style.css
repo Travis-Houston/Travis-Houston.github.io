@@ -764,7 +764,6 @@ fieldset {
 }
 
 .gender .checkmark {
-  display: absolute;
   position: absolute;
   top: 0;
   left: 10px;
