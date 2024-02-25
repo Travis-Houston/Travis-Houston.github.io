@@ -151,10 +151,21 @@ section {
   padding: 1rem;
 }
 
+#countdown1,
+#countdown2,
+#countdown3,
+#countdown4 {
+  animation: counter-hover 0.5s alternate ease-in-out;
+  counter-reset: num var(--num);
+  font: 800 5rem system-ui;
+  padding: 1rem;
+}
+
+
 #countdown1::before,
 #countdown2::before,
 #countdown3::before,
-#countdown4::before {
+#countdown4::before{
   content: counter(num);
 }
 
@@ -174,30 +185,12 @@ section {
   --num: 100;
 }
 
-@keyframes counter-hover {
-  from {
-    --num: 60;
-  }
 
-  to {
-    --num: 9000;
-  }
-}
-
-#countdown1:hover,
-#countdown2:hover,
-#countdown3:hover,
-#countdown4:hover {
-  animation-name: counter-hover;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-}
 
 @keyframes counter-hover {
   from {
-    --num: 60;
+    --num: 0; 
   }
-
   to {
     --num: 9000;
   }
@@ -586,7 +579,15 @@ footer {
   left: 40px;
   margin-bottom: 10px;
 }
-
+.jobs-list-container .details ul .bolding-first-line
+{
+  font-weight: bold;
+  list-style-type: none;
+}
+.jobs-list-container .details ul .bolding
+{
+  font-weight: bold;
+}
 .jobs-list-container .jobs-container .job .Apply-btn {
   text-decoration: none;
   background-color: white;
@@ -602,7 +603,10 @@ footer {
   transition: all 400ms ease;
   border: 2px solid black;
 }
-
+.jobs-list-container .jobs-container .job aside
+{
+  font-size: 15px;
+}
 .jobs-list-container .jobs-container .job .Apply-btn {
   margin-top: 20px;
 }
@@ -702,7 +706,7 @@ hr {
   margin-right: 20px;
 }
 
-.name-container #last_name {
+.name-container #last_name1 {
   margin-left: 20px;
 }
 
@@ -1190,7 +1194,7 @@ footer
     margin-right: 0px;
   }
 
-  .name-container #last_name {
+  .name-container #last_name1 {
     position: relative;
     margin-left: 0px;
   }
