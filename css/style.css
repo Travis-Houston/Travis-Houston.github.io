@@ -410,6 +410,7 @@ footer {
   margin-bottom: 50px;
 }
 
+
 #footer-form .fa-envelope {
   font-size: 18px;
   margin-right: 10px;
@@ -422,7 +423,9 @@ footer {
   border: 0;
   outline: none;
 }
-
+#footer-form input::placeholder {
+  color: rgb(240, 240, 240);
+}
 #footer-form button {
   background: transparent;
   border: 0;
@@ -910,16 +913,16 @@ input:checked+.checkmark {
 .about-section{
   background: url("/images/pic.jpg") no-repeat left;
   background-size: 55%;
-  background-color: #fdfdfd;
+  background-color: #626e75;
   overflow: hidden;
   padding: 100px 0;
 }
 
 .inner-container{
-  width: 55%;
+  width: 40%;
   float: right;
-  background-color: #fdfdfd;
-  padding: 150px;
+  background-color: red;
+  padding: 120px;
 }
 
 .inner-container h1{
@@ -945,12 +948,12 @@ input:checked+.checkmark {
 
 .team-container {
   text-align: center;
-  background: white;
+  background: #626e75;
 }
 
 .team-header {
   padding-top: 30px;
-  color: #444;
+  color: black;
   font-size: 20px;
   margin: auto;
   line-height: 50px;
@@ -970,19 +973,34 @@ input:checked+.checkmark {
   padding: 22px;
   max-width: 30%;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.9s;
   box-sizing: border-box;
   line-break: auto;
+  border: 2px groove black;
+  border-radius: 1em;
+  background-color: #8b8b8b;
 }
-
+.teams:hover .name,
+.teams:hover .position,
+.teams:hover .profile-socials {
+  
+  color: #000;
+}
+.teams:hover .name,
+.teams:hover .position
+{
+  transition: 0.8s;
+}
 .teams:hover {
-  background: #ddd;
+  background: #faf8f8;
   border-radius: 12px;
 }
 
 .teams img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  
 }
 
 .name {
@@ -990,22 +1008,24 @@ input:checked+.checkmark {
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
+  color: white;
 }
 
 .position {
   font-style: italic;
-  color: #888;
+  color: white;
 }
 
 .profile-socials {
   margin: 14px;
+  color: white;
 }
 
 .profile-socials a {
   display: inline-block;
   height: 30px;
   width: 30px;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .profile-socials a:hover {
