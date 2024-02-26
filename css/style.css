@@ -86,7 +86,6 @@ hr {
 /*Logo*/
 .logo {
   width: 50px;
-  float: left;
 }
 
 input[type="checkbox"] {
@@ -399,7 +398,6 @@ a {
   transition: 0.9s;
   box-sizing: border-box;
   line-break: auto;
-  border: 2px groove black;
   border-radius: 1em;
   background-color: #8b8b8b;
 }
@@ -496,6 +494,10 @@ a {
   width: 800px;
 }
 #second-enhancement-pic
+{
+  width: 800px;
+}
+#third-enhancement-pic
 {
   width: 800px;
 }
@@ -1109,6 +1111,26 @@ footer {
 
 /*Laptop view*/
 @media screen and (max-width: 768px) {
+  #first-enhancement-pic
+  {
+    width: 95%;
+  }
+  #second-enhancement-pic
+  {
+    width: 95%;
+  }
+  #third-enhancement-pic
+  {
+    width: 95%;
+  }
+  #fourth-enhancement-pic
+  {
+    width: 95%;
+  }
+  #fifth-enhancement-pic
+  {
+    width: 95%;
+  }
   .jobs-list-container
   {
     margin-left: 15px;
@@ -1201,7 +1223,6 @@ footer
   #countdown4 {
     font-size: 3em;
   }
-
   /* why choose us */
   .section-head h2 {
     font-size: 25px;
