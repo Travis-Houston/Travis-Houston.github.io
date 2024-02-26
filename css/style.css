@@ -18,7 +18,7 @@ body {
 }
 
 /* -----------------------------------*/
-/* ---------->>> HEADER and NAVBAR <<<-----------*/
+/* ---------->>> INDEX, HEADER, AND NAVIGATION BAR <<<-----------*/
 /* -----------------------------------*/
 
 /* Navbar */
@@ -44,6 +44,10 @@ nav a {
 
 .statitics span {
   color: white;
+  position: relative;
+  top: 5px;
+  right: 5px;
+
 }
 
 .statitics h1 {
@@ -63,8 +67,8 @@ nav a {
   line-height: 50px;
   text-align: center;
   color: white;
-}
 
+}
 
 .statitics ul li hr {
   box-sizing: border-box;
@@ -140,17 +144,6 @@ section {
   color: black;
 }
 
-
-#countdown1,
-#countdown2,
-#countdown3,
-#countdown4 {
-  animation: counter 1s alternate ease-in-out;
-  counter-reset: num var(--num);
-  font: 800 5rem system-ui;
-  padding: 1rem;
-}
-
 #countdown1,
 #countdown2,
 #countdown3,
@@ -165,7 +158,7 @@ section {
 #countdown1::before,
 #countdown2::before,
 #countdown3::before,
-#countdown4::before{
+#countdown4::before {
   content: counter(num);
 }
 
@@ -189,8 +182,9 @@ section {
 
 @keyframes counter-hover {
   from {
-    --num: 0; 
+    --num: 0;
   }
+
   to {
     --num: 9000;
   }
@@ -274,6 +268,7 @@ a {
   margin-bottom: 30px;
   transition: all 0.5s ease;
 }
+
 .item:hover {
   background: #c7cfd1;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -321,37 +316,44 @@ a {
   font-size: 15px;
   line-height: 26px;
 }
+
 /* -----------------------------------*/
-/* ---------->>> About Us <<<-----------*/
+/* ---------->>> INDEX, HEADER, AND NAVIGATION BAR <<<-----------*/
 /* -----------------------------------*/
 
-.about-section{
+/* ----------------------------------------------------------------------------- */
+
+/* -----------------------------------*/
+/* ---------->>> ABOUT US <<<-----------*/
+/* -----------------------------------*/
+
+.about-section {
   background: url("/images/about-us.png") no-repeat left;
-  background-size: 55%;
+  background-size: 80%;
   overflow: hidden;
   margin: 100px 0;
   border-radius: 3em;
   background-clip: padding-box;
 }
 
-.inner-container{
+.inner-container {
   width: 45%;
   float: right;
   background-color: #75828a;
-  padding: 120px;
+  padding: 40px;
   position: relative;
   bottom: 0px;
-  
+
 }
 
-.inner-container h1{
-  margin-bottom: 30px;
+.inner-container h1 {
+  margin-bottom: 20px;
   font-size: 35px;
   font-weight: 900;
   color: #f1f1f1;
 }
 
-.text{
+.text {
   font-size: 14px;
   color: #f1f1f1;
   line-height: 30px;
@@ -360,12 +362,83 @@ a {
   margin-bottom: 40px;
 }
 
-.skills{
-  display: flex;
-  justify-content: space-between;
-  font-weight: 700;
-  font-size: 14px;
-  color: #f1f1f1;
+.about-section .inner-container .course-info h2 {
+  margin-top: 10px;
+  text-align: left;
+  clear: both;
+  color: white;
+}
+
+dl {
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  padding: 10px;
+}
+
+dt {
+  float: left;
+  width: 50%;
+  text-align: left;
+  font-weight: bold;
+}
+
+dd {
+  float: left;
+  width: 50%;
+  text-align: right;
+}
+
+.profile img {
+  border: 1px solid #ddd;
+  width: 300px;
+  height: 200px;
+  float: right;
+}
+.table-style h2
+{
+text-align: center;
+font-size: 200%;
+color: white;
+}
+table {
+  border-collapse: collapse;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: 20px;
+}
+table .table-align-center
+{
+  text-align: center;
+}
+table,th,td
+{
+  border: 4px solid #da9452;
+}
+th {
+  background-color: #706262;
+  font-weight: bold;
+  padding: 10px;
+  width: 25%;
+  text-align: left;
+}
+
+td {
+  background-color: #797272;
+  padding: 10px;
+  text-align: left;
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .team-container {
@@ -401,12 +474,14 @@ a {
   border-radius: 1em;
   background-color: #8b8b8b;
 }
+
 .teams:hover .name,
 .teams:hover .position,
 .teams:hover .profile-socials {
-  
+
   color: #000;
 }
+
 .teams:hover {
   background: #faf8f8;
   border-radius: 12px;
@@ -417,6 +492,7 @@ a {
   height: 250px;
   object-fit: cover;
 }
+
 .name {
   padding: 12px;
   font-weight: bold;
@@ -451,10 +527,15 @@ a {
 }
 
 /* -----------------------------------*/
+/* ---------->>> ABOUT US <<<-----------*/
+/* -----------------------------------*/
+
+/* ----------------------------------------------------------------------------- */
+
+/* -----------------------------------*/
 /* ---------->>>ENHANCEMENTS<<<-----------*/
 /* -----------------------------------*/
-.enhancements
-{
+.enhancements {
   font-family: "Rubik", sans-serif;
   max-width: 900px;
   word-wrap: break-word;
@@ -468,49 +549,70 @@ a {
   transition: all 400ms ease;
   background-color: rgb(230, 230, 230);
 }
-.enhancements h2
-{
+
+.enhancements h2 {
   margin-top: 5px;
   margin-bottom: 20px;
   text-align: center;
   font-size: 40px;
 }
-.enhancements:hover
-{
+
+.enhancements-list li:hover {
   transform: scale(1.03);
 }
-.enhancements-list
-{
+
+.enhancements-list {
   position: relative;
   left: 20px;
   margin-bottom: 40px;
+
 }
-.enhancements-list li
-{
-  padding-bottom: 20px;
+
+.enhancements-list li {
+  box-shadow: 0 4px 24px -7px rgba(2, 48, 71, 0.5);
+  margin-bottom: 50px;
+  width: 94%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  list-style-type: none;
+  transition: all 400ms ease;
 }
-#first-enhancement-pic
-{
-  width: 800px;
+
+.enhancements-list li p {
+  padding: 15px 0 15px 0;
+  width: 95%;
+
 }
-#second-enhancement-pic
-{
-  width: 800px;
+
+#first-enhancement-pic {
+  width: 100%;
 }
-#third-enhancement-pic
-{
-  width: 800px;
+
+#second-enhancement-pic {
+  width: 100%;
 }
-#fourth-enhancement-pic
-{
-  width: 800px;
+
+#third-enhancement-pic {
+  width: 100%;
 }
-#fifth-enhancement-pic
-{
-  width: 800px;
+
+#fourth-enhancement-pic {
+  width: 100%;
 }
+
+#fifth-enhancement-pic {
+  width: 100%;
+}
+
 /* -----------------------------------*/
-/* ---------->>>Jobs showing<<<-----------*/
+/* ---------->>>ENHANCEMENTS<<<-----------*/
+/* -----------------------------------*/
+
+/* ----------------------------------------------------------------------------- */
+
+/* -----------------------------------*/
+/* ---------->>>JOBS DECSCRIPTIONS<<<-----------*/
 /* -----------------------------------*/
 .jobs-list-container {
   max-width: 900px;
@@ -595,15 +697,32 @@ a {
   left: 40px;
   margin-bottom: 10px;
 }
-.jobs-list-container .details ul .bolding-first-line
-{
+
+.jobs-list-container .details ul .bolding-first-line {
   font-weight: bold;
   list-style-type: none;
 }
-.jobs-list-container .details ul .bolding
-{
+
+.jobs-list-container .details ul .bolding {
   font-weight: bold;
 }
+
+.jobs-list-container .details ol {
+  font-size: 14px;
+  position: relative;
+  left: 40px;
+  margin-bottom: 10px;
+}
+
+.jobs-list-container .details ol .bolding-first-line {
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.jobs-list-container .details ol .bolding {
+  font-weight: bold;
+}
+
 .jobs-list-container .jobs-container .job .Apply-btn {
   text-decoration: none;
   background-color: white;
@@ -619,10 +738,16 @@ a {
   transition: all 400ms ease;
   border: 2px solid black;
 }
-.jobs-list-container .jobs-container .job aside
-{
-  font-size: 15px;
+
+.jobs-list-container .jobs-container .job .aside {
+  font-size: 12px;
+  width: 25%;
+  float: right;
+  padding-left: 5px;
+  border: 1px solid black;
+  border-radius: 0.8em;
 }
+
 .jobs-list-container .jobs-container .job .Apply-btn {
   margin-top: 20px;
 }
@@ -633,7 +758,13 @@ a {
 }
 
 /* -----------------------------------*/
-/* ---------->>>Jobs Applying<<<-----------*/
+/* ---------->>>JOBS DECSCRIPTIONS<<<-----------*/
+/* -----------------------------------*/
+
+/* ----------------------------------------------------------------------------- */
+
+/* -----------------------------------*/
+/* ---------->>>JOBS APPLYING<<<-----------*/
 /* -----------------------------------*/
 
 /*Personal Information */
@@ -656,9 +787,10 @@ a {
   text-align: center;
   font-size: 60px;
   color: white;
-  margin-bottom: 200px;
+  margin-bottom: 250px;
 }
 
+/*Style header and input for fomrs*/
 .applying-basic-info h2 {
   text-align: left;
   font-size: 20px;
@@ -688,7 +820,6 @@ a {
   border: 1px solid black;
   border-radius: 0.3em;
   text-indent: 0.3em;
-
 }
 
 hr {
@@ -723,11 +854,15 @@ hr {
 }
 
 .name-container #last_name1 {
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .name-container label {
   margin-bottom: 5px;
+}
+
+#last_name_align {
+  margin-right: 0px;
 }
 
 .name-container input {
@@ -900,7 +1035,7 @@ input:checked+.checkmark {
   width: 100%;
 }
 
-
+/*Style apply button*/
 #apply {
   position: relative;
   font-size: 20px;
@@ -915,10 +1050,14 @@ input:checked+.checkmark {
 
 #apply:hover {
   background-color: #000000;
-  color:white;
+  color: white;
 }
 
+/* -----------------------------------*/
+/* ---------->>>JOBS APPLYING<<<-----------*/
+/* -----------------------------------*/
 
+/* ----------------------------------------------------------------------------- */
 
 /* -----------------------------------*/
 /* ---------->>> FOOTER <<<-----------*/
@@ -1015,9 +1154,11 @@ footer {
   border: 0;
   outline: none;
 }
+
 #footer-form input::placeholder {
   color: rgb(240, 240, 240);
 }
+
 #footer-form button {
   background: transparent;
   border: 0;
@@ -1087,55 +1228,60 @@ footer {
   }
 }
 
+/* -----------------------------------*/
+/* ---------->>> FOOTER <<<-----------*/
+/* -----------------------------------*/
 
+/* ----------------------------------------------------------------------------- */
 
 /* -----------------------------------*/
 /* ---------->>> RESPONSIVE <<<-----------*/
 /* -----------------------------------*/
 
-@media screen and (max-width:1200px){
-  .inner-container{
-      padding: 80px;
+@media screen and (max-width:1200px) {
+  .inner-container {
+    padding: 50px;
   }
 }
 
-@media screen and (max-width:1000px){
-  .about-section{
-      background-size: 100%;
-      padding: 100px 40px;
+@media screen and (max-width:1024px) {
+  .about-section {
+    background-size: 100%;
+    padding: 100px 40px;
   }
-  .inner-container{
-      width: 100%;
+
+  .inner-container {
+    width: 100%;
   }
 }
 
 /*Laptop view*/
 @media screen and (max-width: 768px) {
-  #first-enhancement-pic
-  {
+  #first-enhancement-pic {
     width: 95%;
   }
-  #second-enhancement-pic
-  {
+
+  #second-enhancement-pic {
     width: 95%;
   }
-  #third-enhancement-pic
-  {
+
+  #third-enhancement-pic {
     width: 95%;
   }
-  #fourth-enhancement-pic
-  {
+
+  #fourth-enhancement-pic {
     width: 95%;
   }
-  #fifth-enhancement-pic
-  {
+
+  #fifth-enhancement-pic {
     width: 95%;
   }
-  .jobs-list-container
-  {
+
+  .jobs-list-container {
     margin-left: 15px;
     margin-right: 15px;
   }
+
   /*Navigation*/
   label {
     display: block;
@@ -1196,8 +1342,8 @@ footer {
   }
 
 }
-footer
-{
+
+footer {
   left: 0px;
 }
 
@@ -1223,6 +1369,7 @@ footer
   #countdown4 {
     font-size: 3em;
   }
+
   /* why choose us */
   .section-head h2 {
     font-size: 25px;
@@ -1230,29 +1377,53 @@ footer
 }
 
 @media screen and (max-width: 500px) {
+  #applyh1 {
+    margin-bottom: 500px;
+  }
+
+  .inner-container .course-info h1 {
+    font-size: 190%;
+  }
+
+  .inner-container .course-info dl {
+    font-size: 60%;
+  }
+
+  .inner-container .course-info .profile img {
+    height: 150px;
+    width: 200px;
+  }
+
+table {
+    font-size: 70%;
+  }
+
+  .enhancements h2 {
+    font-size: 210%;
+  }
 
   .job-applying-container .applying-basic-info h2 {
     font-size: 150%;
   }
-  .skill_list .container
-  {
+
+  .skill_list .container {
     font-size: 120%;
   }
-  .skill_list .checkmark
-  {
+
+  .skill_list .checkmark {
     height: 20px;
     width: 20px;
   }
 
   /*Reduce IMG size (Don't know how)*/
-  .jobs-list-container h2
-  {
+  .jobs-list-container h2 {
     font-size: 200%;
   }
-  .jobs-list-container .jobs-container .job img
-  {
+
+  .jobs-list-container .jobs-container .job img {
     left: 15px;
   }
+
   .jobs-list-container .jobs-container .job-title {
     font-size: 120%;
     left: 15px;
@@ -1271,11 +1442,16 @@ footer
     font-size: 12px;
     left: 10px;
   }
-  .jobs-list-container .jobs-container .job .Apply-btn
-  {
+
+  .jobs-list-container .details ol {
+    font-size: 12px;
+    left: 10px;
+  }
+
+  .jobs-list-container .jobs-container .job .Apply-btn {
     margin-left: 8px;
   }
-  
+
   .name-container {
     display: block;
   }
@@ -1295,7 +1471,7 @@ footer
   }
 
   #applyh1 {
-    font-size: 240%;
+    font-size: 290%;
     margin-top: 100px;
   }
 }
@@ -1309,11 +1485,19 @@ footer
     font-size: 70%;
   }
 
-  .about-section{
+  .about-section {
     padding: 0;
   }
-  .inner-container{
+
+  .inner-container {
     padding: 60px;
+  }
+
+  .enhancements-list {
+    left: 9px;
+  }
+  table {
+    font-size: 50%;
   }
 }
 
@@ -1321,21 +1505,59 @@ footer
   #applyh1 {
     font-size: 180%;
   }
-  .job-applying-container .applying-basic-info .skill_list h2
+
+  .inner-container .course-info h1 {
+    font-size: 180%;
+  }
+
+  .inner-container .course-info dl {
+    font-size: 50%;
+  }
+
+  .inner-container .course-info .profile img {
+    height: 100px;
+    width: 150px;
+  }
+  table {
+    font-size: 70%;
+  }
+  table,th,td
   {
+    border: 1px solid #da9452;
+  }
+  td,th{
+    
+    padding:0;
+  }
+
+
+  .enhancements h2 {
+    font-size: 150%;
+  }
+
+  .job-applying-container .applying-basic-info .skill_list h2 {
     font-size: 130%;
   }
-  .skill_list .container
-  {
+
+  .skill_list .container {
     font-size: 90%;
   }
 }
 
 @media screen and (max-width: 250px) {
-  .job-applying-container .applying-basic-info fieldset
-  {
+  .inner-container .course-info h2 {
+    font-size: 100%;
+  }
+
+table {
+    position: relative;
+    right: 20px;
+  }
+
+  .job-applying-container .applying-basic-info fieldset {
     width: 100%;
   }
+
   .jobs-list-container h2 {
     font-size: 200%;
   }
@@ -1359,6 +1581,11 @@ footer
     font-size: 10px;
   }
 
+  .jobs-list-container .details ol {
+    left: 10px;
+    font-size: 10px;
+  }
+
   .jobs-list-container .jobs-container .job img {
     left: 0px;
   }
@@ -1367,3 +1594,7 @@ footer
     margin-left: 7px;
   }
 }
+
+/* -----------------------------------*/
+/* ---------->>> RESPONSIVE <<<-----------*/
+/* -----------------------------------*/
