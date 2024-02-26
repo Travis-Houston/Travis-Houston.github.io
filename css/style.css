@@ -399,6 +399,7 @@ dd {
 {
 text-align: center;
 font-size: 200%;
+color: white;
 }
 table {
   border-collapse: collapse;
@@ -1394,8 +1395,8 @@ footer {
     width: 200px;
   }
 
-  .inner-container table {
-    font-size: 90%;
+table {
+    font-size: 70%;
   }
 
   .enhancements h2 {
@@ -1496,6 +1497,9 @@ footer {
   .enhancements-list {
     left: 9px;
   }
+  table {
+    font-size: 50%;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -1515,10 +1519,18 @@ footer {
     height: 100px;
     width: 150px;
   }
-
-  .inner-container table {
-    font-size: 80%;
+  table {
+    font-size: 70%;
   }
+  table,th,td
+  {
+    border: 1px solid #da9452;
+  }
+  td,th{
+    
+    padding:0;
+  }
+
 
   .enhancements h2 {
     font-size: 150%;
@@ -1538,7 +1550,7 @@ footer {
     font-size: 100%;
   }
 
-  .inner-container table {
+table {
     position: relative;
     right: 20px;
   }
