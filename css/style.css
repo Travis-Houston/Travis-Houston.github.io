@@ -837,13 +837,16 @@ hr {
 }
 
 .name-container #last_name1 {
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .name-container label {
   margin-bottom: 5px;
 }
-
+#last_name_align
+{
+  margin-right: 0px;
+}
 .name-container input {
   width: 100%;
   margin-bottom: 10px;
