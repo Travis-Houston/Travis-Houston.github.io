@@ -44,6 +44,10 @@ nav a {
 
 .statitics span {
   color: white;
+  position: relative;
+  top: 5px;
+  right: 5px;
+
 }
 
 .statitics h1 {
@@ -63,8 +67,8 @@ nav a {
   line-height: 50px;
   text-align: center;
   color: white;
+  
 }
-
 
 .statitics ul li hr {
   box-sizing: border-box;
