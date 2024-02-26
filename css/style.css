@@ -622,6 +622,22 @@ a {
 {
   font-weight: bold;
 }
+.jobs-list-container .details ol {
+  font-size: 14px;
+  position: relative;
+  left: 40px;
+  margin-bottom: 10px;
+}
+.jobs-list-container .details ol .bolding-first-line
+{
+  font-weight: bold;
+  list-style-type: none;
+}
+.jobs-list-container .details ol .bolding
+{
+  font-weight: bold;
+}
+
 .jobs-list-container .jobs-container .job .Apply-btn {
   text-decoration: none;
   background-color: white;
@@ -1296,6 +1312,10 @@ footer
     font-size: 12px;
     left: 10px;
   }
+  .jobs-list-container .details ol {
+    font-size: 12px;
+    left: 10px;
+  }
   .jobs-list-container .jobs-container .job .Apply-btn
   {
     margin-left: 8px;
@@ -1391,7 +1411,10 @@ footer
     left: 10px;
     font-size: 10px;
   }
-
+  .jobs-list-container .details ol {
+    left: 10px;
+    font-size: 10px;
+  }
   .jobs-list-container .jobs-container .job img {
     left: 0px;
   }
