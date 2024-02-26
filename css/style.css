@@ -479,8 +479,9 @@ a {
   text-align: center;
   font-size: 40px;
 }
-.enhancements:hover
+.enhancements-list li:hover
 {
+  transition: all 400ms ease;
   transform: scale(1.03);
 }
 .enhancements-list
@@ -491,27 +492,40 @@ a {
 }
 .enhancements-list li
 {
-  padding-bottom: 20px;
+  box-shadow: 0 4px 24px -7px rgba(2, 48, 71, 0.5);
+  margin-bottom: 50px;
+  box-shadow:  rgba(255, 255, 255, 0.5);
+  width: 94%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  list-style-type: none;
+}
+.enhancements-list li p
+{
+  padding: 15px 0 15px 0;
+  width: 95%;
+  
 }
 #first-enhancement-pic
 {
-  width: 800px;
+  width: 100%;
 }
 #second-enhancement-pic
 {
-  width: 800px;
+  width: 100%;
 }
 #third-enhancement-pic
 {
-  width: 800px;
+  width: 100%;
 }
 #fourth-enhancement-pic
 {
-  width: 800px;
+  width: 100%;
 }
 #fifth-enhancement-pic
 {
-  width: 800px;
+  width: 100%;
 }
 /* -----------------------------------*/
 /* ---------->>>Jobs showing<<<-----------*/
@@ -1247,7 +1261,7 @@ footer
     height: 20px;
     width: 20px;
   }
-
+  
   /*Reduce IMG size (Don't know how)*/
   .jobs-list-container h2
   {
@@ -1318,6 +1332,10 @@ footer
   }
   .inner-container{
     padding: 60px;
+  }
+  .enhancements-list
+  {
+    left: 9px;
   }
 }
 
