@@ -85,7 +85,8 @@ hr {
 
 /*Logo*/
 .logo {
-  width: 80px;
+  width: 50px;
+  float: left;
 }
 
 input[type="checkbox"] {
@@ -355,6 +356,7 @@ a {
   font-size: 14px;
   color: #f1f1f1;
   line-height: 30px;
+  /*SHOULD WE CHANGE TO LEFT?*/
   text-align: justify;
   margin-bottom: 40px;
 }
