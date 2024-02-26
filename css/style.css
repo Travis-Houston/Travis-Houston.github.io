@@ -481,7 +481,6 @@ a {
 }
 .enhancements-list li:hover
 {
-  transition: all 400ms ease;
   transform: scale(1.03);
 }
 .enhancements-list
@@ -489,6 +488,7 @@ a {
   position: relative;
   left: 20px;
   margin-bottom: 40px;
+  
 }
 .enhancements-list li
 {
@@ -500,6 +500,7 @@ a {
   padding: 30px;
   border-radius: 16px;
   list-style-type: none;
+  transition: all 400ms ease;
 }
 .enhancements-list li p
 {
@@ -674,7 +675,7 @@ a {
   text-align: center;
   font-size: 60px;
   color: white;
-  margin-bottom: 200px;
+  margin-bottom: 250px;
 }
 
 .applying-basic-info h2 {
@@ -1248,7 +1249,14 @@ footer
 }
 
 @media screen and (max-width: 500px) {
-
+#applyh1
+{
+  margin-bottom: 500px;
+}
+.enhancements h2
+{
+  font-size: 210%;
+}
   .job-applying-container .applying-basic-info h2 {
     font-size: 150%;
   }
@@ -1261,7 +1269,7 @@ footer
     height: 20px;
     width: 20px;
   }
-  
+
   /*Reduce IMG size (Don't know how)*/
   .jobs-list-container h2
   {
@@ -1313,7 +1321,7 @@ footer
   }
 
   #applyh1 {
-    font-size: 240%;
+    font-size: 290%;
     margin-top: 100px;
   }
 }
@@ -1342,6 +1350,10 @@ footer
 @media screen and (max-width: 320px) {
   #applyh1 {
     font-size: 180%;
+  }
+  .enhancements h2
+  {
+    font-size: 150%;
   }
   .job-applying-container .applying-basic-info .skill_list h2
   {
