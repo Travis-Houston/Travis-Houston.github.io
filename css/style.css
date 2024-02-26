@@ -361,25 +361,28 @@ a {
   text-align: justify;
   margin-bottom: 40px;
 }
-.about-section .inner-container .course-info h2
-{
+
+.about-section .inner-container .course-info h2 {
   margin-top: 10px;
   text-align: left;
   clear: both;
   color: white;
 }
+
 dl {
   width: 100%;
   overflow: hidden;
   color: white;
   padding: 10px;
 }
+
 dt {
   float: left;
   width: 50%;
   text-align: left;
   font-weight: bold;
 }
+
 dd {
   float: left;
   width: 50%;
@@ -392,24 +395,37 @@ dd {
   height: 200px;
   float: right;
 }
-
+.table-style h2
+{
+text-align: center;
+font-size: 200%;
+}
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 85%;
+  margin: 0 auto;
   margin-top: 40px;
   color: #ffffff;
+  font-size: 20px;
 }
-
+table .table-align-center
+{
+  text-align: center;
+}
+table,th,td
+{
+  border: 4px solid #da9452;
+}
 th {
   background-color: #706262;
   font-weight: bold;
   padding: 10px;
-  width: 50%;
+  width: 25%;
   text-align: left;
 }
 
 td {
-  background-color: #8d8989;
+  background-color: #797272;
   padding: 10px;
   text-align: left;
 }
@@ -419,6 +435,7 @@ a {
 
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
@@ -843,10 +860,11 @@ hr {
 .name-container label {
   margin-bottom: 5px;
 }
-#last_name_align
-{
+
+#last_name_align {
   margin-right: 0px;
 }
+
 .name-container input {
   width: 100%;
   margin-bottom: 10px;
@@ -1362,23 +1380,24 @@ footer {
   #applyh1 {
     margin-bottom: 500px;
   }
-.inner-container .course-info h1
-{
-  font-size: 190%;
-}
-.inner-container .course-info dl
-{
-  font-size: 60%;
-}
-.inner-container .course-info .profile img
-{
-  height: 150px;
-  width: 200px;
-}
-.inner-container table
-{
-  font-size: 90%;
-}
+
+  .inner-container .course-info h1 {
+    font-size: 190%;
+  }
+
+  .inner-container .course-info dl {
+    font-size: 60%;
+  }
+
+  .inner-container .course-info .profile img {
+    height: 150px;
+    width: 200px;
+  }
+
+  .inner-container table {
+    font-size: 90%;
+  }
+
   .enhancements h2 {
     font-size: 210%;
   }
@@ -1483,23 +1502,24 @@ footer {
   #applyh1 {
     font-size: 180%;
   }
-  .inner-container .course-info h1
-  {
+
+  .inner-container .course-info h1 {
     font-size: 180%;
   }
-  .inner-container .course-info dl
-  {
+
+  .inner-container .course-info dl {
     font-size: 50%;
   }
-  .inner-container .course-info .profile img
-  {
+
+  .inner-container .course-info .profile img {
     height: 100px;
     width: 150px;
   }
-  .inner-container table
-  {
+
+  .inner-container table {
     font-size: 80%;
   }
+
   .enhancements h2 {
     font-size: 150%;
   }
@@ -1514,15 +1534,15 @@ footer {
 }
 
 @media screen and (max-width: 250px) {
-  .inner-container .course-info h2
-  {
+  .inner-container .course-info h2 {
     font-size: 100%;
   }
-  .inner-container table
-  {
+
+  .inner-container table {
     position: relative;
     right: 20px;
   }
+
   .job-applying-container .applying-basic-info fieldset {
     width: 100%;
   }
